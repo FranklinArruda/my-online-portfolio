@@ -4,19 +4,6 @@
 @import"./portifolio.scss";
 @import"./contact.scss";
 
-
-//Body section style
-$fontStack: "Poppins", "sans-serif"; // font style
-$sectionColor1:#E49701; // color 
-$sectionColor2:#A9A5A5; // color
-
-//Buttons style
-$borderNone: none; 
-$btnColor1:#da881e;
-$btnColor2:#7a7878;
-
-
-
 *{
   margin: 0;
   padding: 0;
@@ -25,15 +12,21 @@ $btnColor2:#7a7878;
   box-sizing: border-box;
   outline: none;
   scroll-behavior: smooth;
-  font-family:$fontStack;
+  font-family:"Poppins", "sans-serif";
+}
+
+:root{
+  --bg-color:#7a7878;
+  --second-bg-color:#E49701;
 }
 
 body{
-  background-color:#E49701;
-  p{
-    line-height: 1.6em;
-    font-size: 1.2rem;
-  }
+   background-color:#E49701;
+}
+
+section{
+  min-height: 100vh;
+  padding:15rem 9% 2rem;
 }
 
 
