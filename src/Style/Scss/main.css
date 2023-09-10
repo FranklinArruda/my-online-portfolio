@@ -1,10 +1,9 @@
 .home-curved-background {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-grey);
   border-radius: 0 100% 0 0;
 }
 
 header {
-  position: fixed;
   display: flex;
   width: 100%;
   padding: 3rem 10rem 0 10rem;
@@ -12,25 +11,29 @@ header {
   align-items: center;
   z-index: 100;
 }
-header li {
+header nav {
+  position: fixed;
+  right: 100px;
+}
+header nav li {
   display: inline-block;
   margin-left: 5em;
   text-transform: uppercase;
 }
-header li a, header li a:hover {
+header nav li a, header nav li a:hover {
   color: #000;
   transition: 0.5s;
 }
-header li a:hover {
+header nav li a:hover {
   padding-bottom: 5px;
   border-bottom: 2px solid black;
   border-radius: 5px;
   color: #000;
 }
-header li a:hover, header a.active {
+header nav li a:hover, header nav a.active {
   color: #000000;
 }
-header .active {
+header nav .active {
   font-weight: bold;
 }
 header .logo {
@@ -38,6 +41,7 @@ header .logo {
   font-size: 24px;
   text-decoration: none;
   color: #000;
+  position: sticky;
 }
 header .logo span {
   font-weight: bold;
@@ -86,6 +90,7 @@ header .logo span {
 .home-social-media a:hover {
   background-color: #a2a1a1;
   box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
 }
 .home-social-media a i {
   font-size: 2rem;
@@ -95,25 +100,23 @@ header .logo span {
   position: relative;
   top: 2em;
 }
-
-.btn {
+.home-btn-container .btn {
   color: #000;
   padding: 1em;
   border-radius: 2rem;
   border: none;
   font-weight: 400;
-  background-color: #b3b1ad;
-  box-shadow: rgba(63, 62, 62, 0.35) 0px 5px 15px;
-  box-shadow: rgba(57, 57, 57, 0.17) 0px -23px 25px 0px inset, rgba(57, 57, 57, 0.17) 0px -36px 30px 0px inset, rgba(57, 57, 57, 0.17) 0px -79px 40px 0px inset, rgba(57, 57, 57, 0.17) 0px 2px 1px, rgba(57, 57, 57, 0.17) 0px 4px 2px, rgba(57, 57, 57, 0.17) 0px 8px 4px, rgba(57, 57, 57, 0.17) 0px 16px 8px, rgba(57, 57, 57, 0.17) 0px 32px 16px;
+  background-color: var(--bg-color-grey-2);
+  box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
   text-transform: uppercase;
-  transition: background-color 1s;
 }
-.btn i {
+.home-btn-container .btn i {
   padding: 0.5em;
 }
-.btn:hover {
-  background-color: #a2a1a1;
+.home-btn-container .btn:hover {
+  background-color: var(--hover-btn-grey);
   box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
 }
 
 .about {
@@ -137,22 +140,20 @@ header .logo span {
   padding: 5em;
   right: 4.5em;
 }
-
-.read-more-btn {
+.about-btn-container .read-more-btn {
   color: #000;
   padding: 1em 2.6em 1em 2.6em;
   border-radius: 2rem;
   border: none;
   font-weight: 600;
-  background-color: #c38d18;
-  box-shadow: rgba(63, 62, 62, 0.35) 0px 5px 15px;
-  box-shadow: rgba(57, 57, 57, 0.17) 0px -23px 25px 0px inset, rgba(57, 57, 57, 0.17) 0px -36px 30px 0px inset, rgba(57, 57, 57, 0.17) 0px -79px 40px 0px inset, rgba(57, 57, 57, 0.17) 0px 2px 1px, rgba(57, 57, 57, 0.17) 0px 4px 2px, rgba(57, 57, 57, 0.17) 0px 8px 4px, rgba(57, 57, 57, 0.17) 0px 16px 8px, rgba(57, 57, 57, 0.17) 0px 32px 16px;
+  background-color: var(--bg-color-yellow-2);
+  box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
   text-transform: uppercase;
-  transition: background-color 1s;
 }
-.read-more-btn:hover {
-  background-color: #f8c03d;
+.about-btn-container .read-more-btn:hover {
+  background-color: var(--hover-btn-yellow);
   box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
 }
 
 .read-more-text {
@@ -160,11 +161,215 @@ header .logo span {
 }
 
 .portifolio {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-grey);
+  overflow: hidden;
+}
+.portifolio h2 {
+  transform: translateY(-100px);
+  position: absolute;
+  left: 25;
+}
+
+.portifolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5em;
+}
+.portifolio-container .portifolio-box .card {
+  padding: 0.5em;
+  background-color: var(--bg-color-grey-2);
+  border-radius: 15px;
+}
+.portifolio-container .portifolio-box .card img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.portifolio-container .portifolio-box .card .card-detail {
+  padding: 1em;
+  background-color: var(--bg-color-grey-2);
+  border-radius: 15px;
+}
+.portifolio-container .portifolio-box .card .card-detail span {
+  border-radius: 25px;
+  background-color: var(--bg-color-grey);
+  padding: 8px 16px;
+  margin-right: 16px;
+  font-size: 12px;
+  color: #000;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  background-color: var(--bg-color-grey-2);
+  box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
+  text-transform: uppercase;
+}
+.portifolio-container .portifolio-box .card .card-detail span:hover {
+  background-color: var(--hover-btn-grey);
+  box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
+}
+.portifolio-container .portifolio-box .card .card-detail .name {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.portifolio-container .portifolio-box .card .card-detail p {
+  font-size: 16px;
+  color: #000;
+  line-height: 1.8em;
+  margin-bottom: 2em;
+}
+.portifolio-container .portifolio-box .card .card-detail button {
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  margin: 0 auto;
+  display: block;
+  color: #000;
+  padding: 1em 2.6em 1em 2.6em;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  background-color: var(--bg-color-grey-2);
+  box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
+  text-transform: uppercase;
+}
+.portifolio-container .portifolio-box .card .card-detail button:hover {
+  background-color: var(--hover-btn-grey);
+  box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
+}
+
+.see-more-btn-container {
+  transform: translateY(-30px);
+}
+.see-more-btn-container .see-more-btn {
+  color: #000;
+  padding: 1em 2.6em 1em 2.6em;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  background-color: var(--bg-color-grey-2);
+  box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
+  text-transform: uppercase;
+}
+.see-more-btn-container .see-more-btn:hover {
+  background-color: var(--hover-btn-grey);
+  box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
 }
 
 .contact {
   background-color: var(--second-bg-color);
+}
+
+.form-center, h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px 0;
+}
+
+input[type=text] {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: large;
+  background-color: rgb(202, 196, 196);
+  border: none;
+  text-align: center;
+}
+
+textarea {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: large;
+  background-color: rgb(202, 196, 196);
+  border: none;
+  text-align: center;
+  height: 120px;
+}
+
+::-moz-placeholder {
+  color: rgb(53, 52, 52);
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+::placeholder {
+  color: rgb(53, 52, 52);
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+.button input {
+  color: #000;
+  padding: 1em 2.6em 1em 2.6em;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 600;
+  background-color: var(--bg-color-yellow-2);
+  box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
+  text-transform: uppercase;
+}
+.button input:hover {
+  background-color: var(--hover-btn-yellow);
+  box-shadow: 0 0 1rem #f9f9f9;
+  cursor: pointer;
+}
+
+footer {
+  display: flex; /* Use flexbox to center items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: var(--bg-color-yellow-2);
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 125px;
+}
+footer .footer-content {
+  text-align: center; /* Center text horizontally within the footer */
+}
+footer .footer-content .design {
+  margin: 20px 0;
+  font-weight: 600;
+}
+footer .footer-content .design span {
+  text-transform: uppercase;
+}
+footer .footer-content .design i {
+  padding-left: 15px;
+  font-size: 30px;
+}
+footer .footer-content .icons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+footer .footer-content .icons a {
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+}
+footer .footer-content .icons a i {
+  padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
 * {
@@ -179,12 +384,17 @@ header .logo span {
 }
 
 :root {
-  --bg-color:#7a7878;
-  --second-bg-color:#E49701;
+  --bg-color-grey:#bfbcbc;
+  --bg-color-yellow:#eda30e;
+  --bg-color-grey-2: #a7a6a4;
+  --bg-color-yellow-2: #c58505;
+  --hover-btn-grey:#bfbcbc;
+  --hover-btn-yellow:#d19812;
 }
 
+/*I use a pattern background for all and override section by section*/
 body {
-  background-color: #E49701;
+  background-color: var(--bg-color-yellow);
 }
 
 section {

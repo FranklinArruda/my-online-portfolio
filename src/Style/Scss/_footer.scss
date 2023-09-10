@@ -1,0 +1,55 @@
+footer{
+    display: flex; /* Use flexbox to center items */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color:var(--bg-color-yellow-2);
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+   border-top-left-radius:125px;
+    
+    .footer-content {
+        text-align: center; /* Center text horizontally within the footer */
+      
+       
+      
+        .design {
+            margin:20px 0;
+            font-weight: 600;
+        
+        span{
+            text-transform: uppercase;
+        }
+        
+        i{
+            padding-left: 15px;
+            font-size: 30px; 
+        }
+        
+    }
+
+    .icons{
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        
+        a{
+            
+            background-color:transparent;
+            color:black;
+            font-size: 30px;
+
+            i{
+                
+                padding: 0.5em 0.5em 0.5em 0.5em;
+            }
+        }
+        
+    }
+    
+    }
+      
+     
+}
+
+

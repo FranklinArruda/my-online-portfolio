@@ -3,6 +3,8 @@
 @import"./about.scss";
 @import"./portifolio.scss";
 @import"./contact.scss";
+@import"./footer.scss";
+
 
 *{
   margin: 0;
@@ -16,12 +18,16 @@
 }
 
 :root{
-  --bg-color:#7a7878;
-  --second-bg-color:#E49701;
+  --bg-color-grey:#bfbcbc;
+  --bg-color-yellow:#eda30e;
+  --bg-color-grey-2: #a7a6a4;
+  --bg-color-yellow-2: #c58505;
+  --hover-btn-grey:#bfbcbc;
+  --hover-btn-yellow:#d19812;
 }
-
+/*I use a pattern background for all and override section by section*/
 body{
-   background-color:#E49701;
+   background-color:var(--bg-color-yellow);
 }
 
 section{

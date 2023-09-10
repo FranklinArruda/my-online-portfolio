@@ -1,21 +1,23 @@
 
 // curved gray background
 .home-curved-background{
-    background-color:var(--bg-color);
+    background-color:var(--bg-color-grey);
     border-radius: 0 100% 0 0;
   }
   
-  // header
+// header
 header {
-  position: fixed;
-  display: flex;
+ display: flex;
   width:100%;
   padding: 3rem 10rem 0 10rem;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
 
-li{
+  nav{
+    position: fixed;
+    right:100px;
+    li{
   display: inline-block;
   margin-left: 5em;
   text-transform: uppercase;
@@ -37,11 +39,15 @@ li a:hover, a.active{
 .active{
   font-weight: bold;
 }
+  }
+
+
 .logo {
   position: relative;
   font-size: 24px;
   text-decoration: none;
   color: #000;
+  position: sticky;
 
   span{
     font-weight: bold;
@@ -101,36 +107,38 @@ li a:hover, a.active{
     &:hover {
       background-color: #a2a1a1;
       box-shadow: 0 0 1rem #f9f9f9;
+      cursor:pointer;
     }
     i {
       font-size: 2rem;
     }
   }
 }
+
+//buttons
 .home-btn-container{
   position:relative;
   top: 2em;
-}
-// buttons
-.btn {
-  color: #000;
-  padding: 1em;
-  border-radius: 2rem;
-  border: none;
-  font-weight: 400;
-  background-color: #b3b1ad;
-  box-shadow: rgba(63, 62, 62, 0.35) 0px 5px 15px;
-  box-shadow: rgba(57, 57, 57, 0.17) 0px -23px 25px 0px inset, rgba(57, 57, 57, 0.17) 0px -36px 30px 0px inset, rgba(57, 57, 57, 0.17) 0px -79px 40px 0px inset, rgba(57, 57, 57, 0.17)0px 2px 1px, rgba(57, 57, 57, 0.17) 0px 4px 2px, rgba(57, 57, 57, 0.17)0px 8px 4px, rgba(57, 57, 57, 0.17) 0px 16px 8px, rgba(57, 57, 57, 0.17) 0px 32px 16px;
-  text-transform: uppercase;
-  transition: background-color 1s;
 
-  i {
-    padding: 0.5em;
-  }
-  
-  &:hover {
-    background-color: #a2a1a1;
-    box-shadow: 0 0 1rem #f9f9f9;
+  .btn {
+    color: #000;
+    padding: 1em;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 400;
+    background-color:var(--bg-color-grey-2);
+    box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
+    text-transform: uppercase;
+
+    i {
+      padding: 0.5em;
+    }
+    
+    &:hover {
+      background-color:var(--hover-btn-grey);
+      box-shadow: 0 0 1rem #f9f9f9;
+      cursor:pointer;
+    }
   }
 }
 
