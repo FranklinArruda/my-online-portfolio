@@ -6,27 +6,28 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px 0;
+    padding: 10px;
 }
 
 input[type=text]{
-    width: 500px;
-    padding: 12px 20px;
-    margin: 8px 0;
+    width: 400px;
+    padding: 5px 10px;
+    margin: 4px 0;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: large;
+    font-size: 10;
     background-color:rgb(202, 196, 196);
     border: none;
     text-align: center;
 }
 
 textarea{
-    width: 500px;
+    width: 400px;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 4px 0;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: large;
+    font-size: 10px;
     background-color:rgb(202, 196, 196);
     border: none;
     text-align: center;
@@ -35,7 +36,7 @@ textarea{
 
 ::placeholder{
     color:rgb(53, 52, 52);
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -43,6 +44,7 @@ textarea{
     display: flex;
     justify-content: center;
     padding-top: 1em;
+    font-size: 10px;
     
     input{
       color: #000;
@@ -51,6 +53,7 @@ textarea{
       border: none;
       font-weight: 600;
       background-color:var(--bg-color-yellow-2);
+      font-size: 12px;
       box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
       text-transform: uppercase;  
       &:hover {

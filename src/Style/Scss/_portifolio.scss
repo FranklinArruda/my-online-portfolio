@@ -3,34 +3,34 @@
     overflow: hidden; 
     
     h2{
-        transform: translateY(-100px);
+        transform: translateY(-150px);
         position: absolute;
         left: 25;
     }
     
 }
 
-.portifolio-container{
-  
-    
+.portifolio-container{ 
+    transform: translateY(-100px);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
-    
     gap: 2.5em;
     
     
-    .portifolio-box{    
-      
-
+    
+    .portifolio-box{ 
+        height: 400px;
+    
         .card{
             padding: 0.5em;
             background-color:var(--bg-color-grey-2);
             border-radius: 15px;
-
+            max-width: 300px;
+            
             img{
                 width: 100%;
-                height: 300px;
+                height: 200px;
                 object-fit: cover;
                 border-radius: 15px;
                 }
@@ -39,13 +39,14 @@
                 padding:1em;
                 background-color: var(--bg-color-grey-2);
                 border-radius: 15px;
+                height: 200px;
 
                 span{
                     border-radius: 25px;
                     background-color:var(--bg-color-grey);
                     padding: 8px 16px;
                     margin-right: 16px;
-                    font-size: 12px;
+                    font-size: 10px;
 
                     color: #000;
                     
@@ -63,21 +64,22 @@
                 }
                    
                 .name{
-                    font-size: 24px;
+                    font-size: 16px;
                     font-weight:800;
                     margin-top: 16px;
                     margin-bottom: 16px;
                 }
 
                 p{
-                    font-size: 16px;
+                    font-size: 14px;
                     color: #000;
                     line-height: 1.8em;
                     margin-bottom:2em;
                 }
             
                 button{
-                    
+                    position: relative;
+                    bottom: 20px;
                     border: none;
                     border-radius: 50px;
                     padding: 12px 24px;
@@ -90,6 +92,7 @@
                     border-radius: 2rem;
                     border: none;
                     font-weight: 600;
+                    font-size: 10px;
                     background-color:var(--bg-color-grey-2);
                     box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
                     text-transform: uppercase;  
@@ -114,7 +117,7 @@
 
 
 .see-more-btn-container{
-    transform: translateY(-30px);
+    transform: translateY(-40px);
     
     .see-more-btn {
         color: #000;
@@ -124,7 +127,8 @@
         font-weight: 600;
         background-color:var(--bg-color-grey-2);
         box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
-        text-transform: uppercase;  
+        text-transform: uppercase; 
+        font-size: 12px;
         &:hover {
             background-color:var(--hover-btn-grey);
             box-shadow: 0 0 1rem #f9f9f9;

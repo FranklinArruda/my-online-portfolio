@@ -7,23 +7,31 @@
   
 // header
 header {
- display: flex;
+
   width:100%;
   padding: 3rem 10rem 0 10rem;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-
+ 
   nav{
+    display: flex;
     position: fixed;
-    right:100px;
-    li{
-  display: inline-block;
-  margin-left: 5em;
-  text-transform: uppercase;
+    left: 600px;
+  }
+
+  
+    
+  li{
+    display: inline-block;
+    margin-left: 5em;
+    text-transform: uppercase;
+  
+    
   a, a:hover{
     color: #000;
     transition: 0.5s;
+    font-size: 14px;
   }
   a:hover{
     padding-bottom: 5px;
@@ -44,23 +52,24 @@ li a:hover, a.active{
 
 .logo {
   position: relative;
-  font-size: 24px;
+  font-size: 16px;
   text-decoration: none;
   color: #000;
-  position: sticky;
+  position: relative;
+  top: 50px;
 
   span{
     font-weight: bold;
     }
   }
-}
+
 
 // Portifolio image
 .portfolio-img{
-  width: 450px;
-  height: 300;
+  width: 350px;
+  height: 200;
   border-radius: 50%;
-  border: 1.6rem solid var()
+  
 }
 
 // Home section
@@ -72,26 +81,33 @@ li a:hover, a.active{
   align-items: center; 
   
   p{
-    line-height: 1.6em;
-    font-size: 1.2rem;
+    line-height:1.6em;;
+    font-size: 14px;
   }
 
-.home-content h3{
-  font-size: 2.5rem;
-  font-weight: 700;
+.home-content{
 
   h1{
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.3;
+    font-size: 30px;
+    font-weight: 700;
+    span{
+      font-size: 40px;
     }
+  }
+  h2{
+    font-size: 25px;
+    span{
+      font-size: 35px;
+    }
+  }
   } 
+  
 }
   
 
 // social media icons
 .home-social-media {
-  margin:1.6em 0 1.6em 0;
+  margin:1em 0 1em 0;
 
   a {
     display: inline-flex;
@@ -110,7 +126,7 @@ li a:hover, a.active{
       cursor:pointer;
     }
     i {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -118,17 +134,19 @@ li a:hover, a.active{
 //buttons
 .home-btn-container{
   position:relative;
-  top: 2em;
+  top: 1em;
 
   .btn {
     color: #000;
-    padding: 1em;
+    padding: 1rem;
     border-radius: 2rem;
     border: none;
     font-weight: 400;
     background-color:var(--bg-color-grey-2);
     box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
     text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
 
     i {
       padding: 0.5em;
