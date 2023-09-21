@@ -1,57 +1,43 @@
-.about{
-    background-color:var(--second-bg-color);
-    
-    h1{
-        margin-bottom: 2rem;
-        
+
+// about content
+.about-content{
+    color: white;
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
+
     p{
         line-height: 1.6em;
-        font-size: 14px;
-        padding-top: 1em;
-      }
-}
+    }
 
-.about-content {
-    overflow: hidden;
-  }
-
-.about-btn-container{
-  position:relative;
-  padding: 5em;
-  right: 4.5em;
-  
-  .read-more-btn {
-      color: #000;
-      padding: 1em 2.6em 1em 2.6em;
-      border-radius: 2rem;
-      border: none;
+// button
+.btn-container.section2{
+    margin-top: 2rem;
+    background-color:var(--btn-color);
+    transition: background-color 0.1s;
+   // transition: padding-left 0.5s;
+   
+   .read-more-btn{
+    color:white;
+   }
+   
+    &:hover{
+      background-color:rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      transition: 0.2s;
+      padding-right: 18px;
       font-weight: 600;
-      background-color:var(--bg-color-yellow-2);
-      box-shadow: rgba(56, 55, 55, 0.35) 0px 5px 15px;
-      text-transform: uppercase;  
-      font-size: 12px;
-      &:hover {
-        background-color:var(--hover-btn-yellow);
-        box-shadow: 0 0 1rem #f9f9f9;
-        cursor:pointer;
+      
+  
+      &:hover a{
+        color: rgb(0, 0, 0);
       }
     }
-}
-
-
+  }
   
+  // hiding from page when load and read more button to be clicked
   .read-more-text{
     display: none;
   }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+}

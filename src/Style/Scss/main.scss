@@ -1,11 +1,12 @@
 
+@import "./header.scss";
 @import"./home.scss";
 @import"./about.scss";
 @import"./portifolio.scss";
 @import"./contact.scss";
 @import"./footer.scss";
 
-
+// reseting
 *{
   margin: 0;
   padding: 0;
@@ -14,27 +15,48 @@
   box-sizing: border-box;
   outline: none;
   scroll-behavior: smooth;
-  font-family:"Poppins", "sans-serif";
 }
 
-:root{
-  --bg-color-grey:#bfbcbc;
-  --bg-color-yellow:#eda30e;
-  --bg-color-grey-2: #a7a6a4;
-  --bg-color-yellow-2: #c58505;
-  --hover-btn-grey:#bfbcbc;
-  --hover-btn-yellow:#d19812;
+
+// Global variables for colors, fonts, and spacing
+
+:root {
+  //--bg-color: #139c85;
+  --bg-color:#09647b;
+  --second-bg-color: #e9e6e6;
+  --btn-color:#288da6;
+  --font-family: 'Poppins', sans-serif;
+  --font-size: 16px;
 }
-/*I use a pattern background for all and override section by section*/
+
+
+//I use a pattern background for all and override section by section
 body{
-   background-color:var(--bg-color-yellow);
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  font-size:var(--font-size);
 }
 
+// global section
 section{
   min-height: 100vh;
-  padding:15rem 9% 2rem;
+  width: 100%;
+  padding: 10% 10% 5%;
+  }
+
+.btn-container{
+  background-color:var(--btn-color1);
+  width: 165px;
+  padding: 0.5em;
+  text-align: center; 
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
+  
 
 
 
