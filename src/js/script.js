@@ -19,7 +19,7 @@ function startReadMore(event){
  * When hovers over the download CV button it hides the"download" message and only icon remains
  * When mouse leaves appears again
  */
-const btnContainer = document.querySelector(".section1");
+/* const btnContainer = document.querySelector(".section1");
 const btnText = document.querySelector(".download-btn");
 
 btnContainer.addEventListener("mouseenter", hideText);
@@ -30,8 +30,27 @@ function hideText(event){
 btnContainer.addEventListener("mouseleave", showText);
 function showText(event){
     btnText.style.display = 'inline-block'; // Hide the icon on mouse enter
+}; */
+
+
+const readMoreCard = document.querySelector('.read-more');
+readMoreCard.addEventListener('click', startReadMoreCard);
+
+function startReadMoreCard(event){
+    event.preventDefault();
+    const readMoreTxt = document.querySelector('.read-more-card-text');
+    readMoreTxt.style.display = "inline";
 };
 
 
 
+const cardBtn = document.querySelector('.hide-card-text');
+cardBtn.addEventListener('click', hideCardText);
+
+function hideCardText(event){
+    event.preventDefault();
+
+    const readMoreTxt = document.querySelector('.read-more-card-text');
+    readMoreTxt.style.display = "none";
+};
  
