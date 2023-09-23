@@ -58,19 +58,19 @@
   transition: background-color 0.1s;
  // transition: padding-left 0.5s;
  
- .download-btn{
-  color: black;
-}
+    a{
+      color: black;
+    }
 
-/* Initially hide the icon */
-.icon {
-  display: none;
-}
+    /* Initially hide the icon */
+    .icon {
+      display: none;
+    }
 
-/* Show the icon when hovering over the .btn-container */
-.btn-container:hover .icon {
-  display: inline-block;
-}
+    /* Show the icon when hovering over the .btn-container */
+    .btn-container:hover .icon {
+      display: inline-block;
+    }
 
 
   &:hover{

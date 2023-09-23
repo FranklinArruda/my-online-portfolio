@@ -95,7 +95,7 @@ header nav ul li:hover::after {
   /* Initially hide the icon */
   /* Show the icon when hovering over the .btn-container */
 }
-.btn-container.section1 .download-btn {
+.btn-container.section1 a {
   color: black;
 }
 .btn-container.section1 .icon {
