@@ -5,6 +5,9 @@
         font-size: 1.5rem;
         margin-bottom: 2.5rem;
     }
+    p{
+        margin-bottom: 2.5rem;
+    }
 }
 
 /* .portifolio-box{
@@ -19,7 +22,7 @@
 
  //box container
 .portifolio-box{
-    margin-top: 2.5rem;
+    
     display: grid;
     column-gap: 10px;
     row-gap:50px;
@@ -27,6 +30,7 @@
 
     // card container
     .card{
+       
         margin: auto;
         width:90%;
         position: relative;

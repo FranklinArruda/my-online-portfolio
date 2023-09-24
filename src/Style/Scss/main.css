@@ -168,6 +168,9 @@ header nav ul li:hover::after {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
 }
+.portifolio p {
+  margin-bottom: 2.5rem;
+}
 
 /* .portifolio-box{
     display: grid;
@@ -178,7 +181,6 @@ header nav ul li:hover::after {
 }  
  */
 .portifolio-box {
-  margin-top: 2rem;
   display: grid;
   -moz-column-gap: 10px;
        column-gap: 10px;
