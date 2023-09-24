@@ -204,27 +204,36 @@ header nav ul li:hover::after {
   text-align: center;
   padding-top: 2em;
   border-radius: 5px;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 .portifolio-box .card .name h3 {
   padding-bottom: 1em;
 }
 .portifolio-box .card .name p {
-  font-size: 12px;
+  font-size: 14px;
 }
-.portifolio-box .card .name .to-go {
+.portifolio-box .card:hover .name {
+  opacity: 1;
+  display: block;
+}
+.portifolio-box .card .to-go {
   margin-top: 2rem;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
 }
-.portifolio-box .card .name .to-go p {
+.portifolio-box .card .to-go .text-container {
+  width: 300px;
+  height: auto;
+}
+.portifolio-box .card .to-go p {
   font-size: 14px;
   z-index: 100;
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 125%;
   height: auto;
   display: none;
   background-color: rgb(225, 225, 225);
@@ -235,36 +244,30 @@ header nav ul li:hover::after {
   margin-bottom: 2rem;
   box-shadow: 10px 10px 25px rgb(46, 46, 46);
 }
-.portifolio-box .card .name .to-go p span {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
+.portifolio-box .card .to-go p span {
   background-color: var(--bg-color);
   color: white;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 5px;
-  width: 50px;
+  margin-left: 1rem;
   text-align: center;
 }
-.portifolio-box .card .name .to-go a {
+.portifolio-box .card .to-go a {
   margin-right: 10px;
   text-decoration: none;
   color: white;
   font-size: 12px;
 }
-.portifolio-box .card .name .to-go a i {
+.portifolio-box .card .to-go a i {
   font-size: 25px;
 }
-.portifolio-box .card .name .to-go:hover .read-more {
+.portifolio-box .card .to-go:hover .read-more {
   font-size: 12px;
   background-color: white;
   border-radius: 15px;
   color: black;
   padding: 5px;
   font-weight: 600;
-}
-.portifolio-box .card:hover .name {
-  display: block;
 }
 
 * {
@@ -278,7 +281,7 @@ header nav ul li:hover::after {
 }
 
 :root {
-  --bg-color:#09647b;
+  --bg-color:rgb(9, 100, 123);
   --second-bg-color: #e9e6e6;
   --btn-color:#288da6;
   --font-family: "Poppins", sans-serif;

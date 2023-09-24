@@ -33,15 +33,15 @@ function showText(event){
 }; */
 
 
-const readMoreCard = document.querySelector('.read-more');
+/* const readMoreCard = document.querySelector('.read-more');
 readMoreCard.addEventListener('click', startReadMoreCard);
 
 function startReadMoreCard(event){
     event.preventDefault();
     const readMoreTxt = document.querySelector('.read-more-card-text');
-    readMoreTxt.style.display = "inline";
+    readMoreTxt.style.display = "block";
+    
 };
-
 
 
 const cardBtn = document.querySelector('.hide-card-text');
@@ -52,5 +52,29 @@ function hideCardText(event){
 
     const readMoreTxt = document.querySelector('.read-more-card-text');
     readMoreTxt.style.display = "none";
-};
+}; */
+
+// Get all elements with the class "read-more"
+const readMoreCards = document.querySelectorAll('.read-more, .hide-card-text');
+
+// Add click event listeners to all "read-more" elements
+readMoreCards.forEach(readMoreCard => {
+  readMoreCard.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Find the associated "read-more-card-text" element within the same card
+    const readMoreTxt = readMoreCard.closest('.card').querySelector('.read-more-card-text');
+
+    // Toggle the display of the associated content
+    if (readMoreTxt.style.display === "none" || readMoreTxt.style.display === "") {
+      readMoreTxt.style.display = "block";
+    } else {
+      readMoreTxt.style.display = "none";
+    }
+  });
+});
+
+// Similarly, add click event listeners to all "hide-card-text" elements if needed
+
+
  

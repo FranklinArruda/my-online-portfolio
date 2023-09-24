@@ -15,13 +15,16 @@
     background-color: #7bb8e9;
 }  
  */
+
+
+ //box container
 .portifolio-box{
     display: grid;
     column-gap: 10px;
     row-gap:50px;
     grid-template-columns: auto auto auto;
-   
-        
+
+    // card container
     .card{
         margin: auto;
         width:90%;
@@ -33,6 +36,7 @@
             box-shadow: 5px 5px 20px rgb(46, 46, 46);
         }
 
+        // headings
         .name{
             width: 90%;
             background-color: var(--bg-color);
@@ -43,77 +47,83 @@
             text-align: center;
             padding-top: 2em;
             border-radius: 5px;
-            display: none;
+            //display: none;
+            opacity: 0; 
+            transition: opacity 0.2s ease;            
+           
             h3{
                 padding-bottom: 1em;
-                
+            
             } 
             p{
-                font-size: 12px;
-            }
-            .to-go{
-                margin-top: 2rem;
-                justify-content: center;
-                align-items: center;
-                justify-content: space-between;
-                
-                p{
-                    font-size: 14px;
-                    z-index: 100;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 200%;
-                    height: auto;
-                    display: none;
-                    background-color:rgb(225, 225, 225);
-                    color: black;
-                    padding: 15px;
-                    border-radius: 5px;
-                    text-align: justify;
-                    margin-bottom: 2rem;
-                    box-shadow: 10px 10px 25px rgb(46, 46, 46);
-                    
-
-                    span{
-                        position: absolute;
-                        bottom: 5px;
-                        left: 50%;
-                        background-color:var(--bg-color);
-                        color:white;
-                        border-radius: 25px;
-                        padding: 5px;
-                        width: 50px;
-                        text-align: center;
-                    }
-                }
-                a{  
-                    margin-right: 10px;
-                    text-decoration: none;
-                    color: white;
-                    font-size: 12px;
-                    i{
-                        font-size: 25px;
-                    }
-                }
-
-                &:hover .read-more{
-                    
-                    font-size: 12px;
-                    background-color: white;
-                    border-radius: 15px;
-                    color: black;
-                    padding: 5px;
-                    font-weight: 600;
-                }
-
-              
-            }  
+                font-size: 14px;
+            } 
         }
-        
         &:hover .name{
-            display: block;   
-        }   
+            opacity: 1; 
+            display: block;  
+        } 
+        
+        // read more & go (link)          
+        .to-go{
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .text-container{
+                width: 300px;
+                height: auto;
+            }
+            p{
+                font-size: 14px;
+                z-index: 100;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 125%;
+                height: auto;
+                display: none;
+                background-color:rgb(225, 225, 225);
+                color: black;
+                padding: 15px;
+                border-radius: 5px;
+                text-align: justify;
+                margin-bottom: 2rem;
+                box-shadow: 10px 10px 25px rgb(46, 46, 46);
+            
+                // button close
+            span{
+               //  position: absolute;
+               // bottom: 5px;
+               // left: 50%;
+                background-color:var(--bg-color);
+                color:white;
+                border-radius: 10px;
+                padding: 5px;
+                margin-left: 1rem;
+                text-align: center;            }
+            }
+            a{  
+                margin-right: 10px;
+                text-decoration: none;
+                color: white;
+                font-size: 12px;
+                i{
+                    font-size: 25px;
+                }
+            }
+
+            &:hover .read-more{
+            
+                font-size: 12px;
+                background-color: white;
+                border-radius: 15px;
+                color: black;
+                padding: 5px;
+                font-weight: 600;
+            }
+        } 
     }
 } 
-
