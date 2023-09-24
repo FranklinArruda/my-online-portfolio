@@ -19,6 +19,7 @@
 
  //box container
 .portifolio-box{
+    margin-top: 2rem;
     display: grid;
     column-gap: 10px;
     row-gap:50px;
@@ -76,7 +77,7 @@
                 width: 300px;
                 height: auto;
             }
-            p{
+            .read-more-card-text{
                 font-size: 14px;
                 z-index: 100;
                 position: absolute;
@@ -94,7 +95,7 @@
                 box-shadow: 10px 10px 25px rgb(46, 46, 46);
             
                 // button close
-            span{
+            .hide-card-text{
                //  position: absolute;
                // bottom: 5px;
                // left: 50%;
@@ -103,7 +104,13 @@
                 border-radius: 10px;
                 padding: 5px;
                 margin-left: 1rem;
-                text-align: center;            }
+                text-align: center;
+            }
+            
+            .my-name{
+                font-weight: 600;
+                font-style: italic;
+            }
             }
             a{  
                 margin-right: 10px;

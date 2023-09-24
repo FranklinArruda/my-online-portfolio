@@ -178,6 +178,7 @@ header nav ul li:hover::after {
 }  
  */
 .portifolio-box {
+  margin-top: 2rem;
   display: grid;
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -227,7 +228,7 @@ header nav ul li:hover::after {
   width: 300px;
   height: auto;
 }
-.portifolio-box .card .to-go p {
+.portifolio-box .card .to-go .read-more-card-text {
   font-size: 14px;
   z-index: 100;
   position: absolute;
@@ -244,13 +245,17 @@ header nav ul li:hover::after {
   margin-bottom: 2rem;
   box-shadow: 10px 10px 25px rgb(46, 46, 46);
 }
-.portifolio-box .card .to-go p span {
+.portifolio-box .card .to-go .read-more-card-text .hide-card-text {
   background-color: var(--bg-color);
   color: white;
   border-radius: 10px;
   padding: 5px;
   margin-left: 1rem;
   text-align: center;
+}
+.portifolio-box .card .to-go .read-more-card-text .my-name {
+  font-weight: 600;
+  font-style: italic;
 }
 .portifolio-box .card .to-go a {
   margin-right: 10px;
