@@ -5,9 +5,6 @@
         font-size: 1.5rem;
         margin-bottom: 2.5rem;
     }
-    p{
-        margin-bottom: 2.5rem;
-    }
 }
 
 /* .portifolio-box{
@@ -22,28 +19,31 @@
 
  //box container
 .portifolio-box{
-    
+    margin-top: 2rem;
     display: grid;
     column-gap: 10px;
     row-gap:50px;
     grid-template-columns: auto auto auto;
 
-    // card container
+   // card container
     .card{
-       
         margin: auto;
         width:90%;
+        height: auto;
         position: relative;
-
+        transition: transform 0.2s ease;
+        
         img{
             width: inherit;
+            height: auto;
             border-radius: 5px;
             box-shadow: 5px 5px 20px rgb(46, 46, 46);
         }
 
         // headings
         .name{
-            width: 90%;
+            width: inherit;
+            height: auto;
             background-color: var(--bg-color);
             color: white;
             position: absolute;
@@ -62,79 +62,89 @@
             } 
             p{
                 font-size: 14px;
-            } 
+            }
+
+            // hovers the name (shows the card)
+            &:hover{
+                opacity: 1; 
+                display: block;
+            }
         }
-        &:hover .name{
-            opacity: 1; 
-            display: block;  
-        } 
-        
-        // read more & go (link)          
-        .to-go{
-            margin-top: 2rem;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-between;
 
-
-            .text-container{
-                width: 300px;
-                height: auto;
-            }
-            .read-more-card-text{
-                font-size: 14px;
-                z-index: 100;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 125%;
-                height: auto;
-                display: none;
-                background-color:rgb(225, 225, 225);
-                color: black;
-                padding: 15px;
-                border-radius: 5px;
-                text-align: justify;
-                margin-bottom: 2rem;
-                box-shadow: 10px 10px 25px rgb(46, 46, 46);
-            
-                // button close
-            .hide-card-text{
-               //  position: absolute;
-               // bottom: 5px;
-               // left: 50%;
-                background-color:var(--bg-color);
-                color:white;
-                border-radius: 10px;
-                padding: 5px;
-                margin-left: 1rem;
-                text-align: center;
-            }
-            
-            .my-name{
-                font-weight: 600;
-                font-style: italic;
-            }
-            }
-            a{  
-                margin-right: 10px;
-                text-decoration: none;
-                color: white;
-                font-size: 12px;
-                i{
-                    font-size: 25px;
-                }
-            }
-
-            &:hover .read-more{
-            
-                font-size: 12px;
-                background-color: white;
-                border-radius: 15px;
-                color: black;
-                padding: 5px;
-                font-weight: 600;
-            }
-        } 
+        // hovers the card (give scales)
+        &:hover{
+            transform: scale(0.9);  
+        }  
     }
+
+
+
+    // read more & go (link)          
+    .to-go{
+       
+        margin-top: 2rem;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .text-container{
+            width: 300px;
+            height: auto;
+        }
+        .read-more-card-text{
+            font-size: 14px;
+            z-index: 100;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 125%;
+            height: auto;
+            display: none;
+            background-color:rgb(225, 225, 225);
+            color: black;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: justify;
+            margin-bottom: 2rem;
+            box-shadow: 10px 10px 25px rgb(46, 46, 46);
+            
+            // button close
+        .hide-card-text{
+           //  position: absolute;
+           // bottom: 5px;
+           // left: 50%;
+            background-color:var(--bg-color);
+            color:white;
+            border-radius: 10px;
+            padding: 5px;
+            margin-left: 1rem;
+            text-align: center;
+        }
+        
+        .my-name{
+            font-weight: 600;
+            font-style: italic;
+        }
+        }
+        a{  
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            i{
+                font-size: 25px;
+            }
+        }
+
+        &:hover .read-more{
+        
+            font-size: 12px;
+            background-color: white;
+            border-radius: 15px;
+            color: black;
+            padding: 5px;
+            font-weight: 600;
+        }
+    } 
 } 

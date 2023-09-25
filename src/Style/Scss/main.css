@@ -168,9 +168,6 @@ header nav ul li:hover::after {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
 }
-.portifolio p {
-  margin-bottom: 2.5rem;
-}
 
 /* .portifolio-box{
     display: grid;
@@ -181,6 +178,7 @@ header nav ul li:hover::after {
 }  
  */
 .portifolio-box {
+  margin-top: 2rem;
   display: grid;
   -moz-column-gap: 10px;
        column-gap: 10px;
@@ -190,15 +188,19 @@ header nav ul li:hover::after {
 .portifolio-box .card {
   margin: auto;
   width: 90%;
+  height: auto;
   position: relative;
+  transition: transform 0.2s ease;
 }
 .portifolio-box .card img {
   width: inherit;
+  height: auto;
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgb(46, 46, 46);
 }
 .portifolio-box .card .name {
-  width: 90%;
+  width: inherit;
+  height: auto;
   background-color: var(--bg-color);
   color: white;
   position: absolute;
@@ -216,21 +218,24 @@ header nav ul li:hover::after {
 .portifolio-box .card .name p {
   font-size: 14px;
 }
-.portifolio-box .card:hover .name {
+.portifolio-box .card .name:hover {
   opacity: 1;
   display: block;
 }
-.portifolio-box .card .to-go {
+.portifolio-box .card:hover {
+  transform: scale(0.9);
+}
+.portifolio-box .to-go {
   margin-top: 2rem;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
 }
-.portifolio-box .card .to-go .text-container {
+.portifolio-box .to-go .text-container {
   width: 300px;
   height: auto;
 }
-.portifolio-box .card .to-go .read-more-card-text {
+.portifolio-box .to-go .read-more-card-text {
   font-size: 14px;
   z-index: 100;
   position: absolute;
@@ -247,7 +252,7 @@ header nav ul li:hover::after {
   margin-bottom: 2rem;
   box-shadow: 10px 10px 25px rgb(46, 46, 46);
 }
-.portifolio-box .card .to-go .read-more-card-text .hide-card-text {
+.portifolio-box .to-go .read-more-card-text .hide-card-text {
   background-color: var(--bg-color);
   color: white;
   border-radius: 10px;
@@ -255,26 +260,99 @@ header nav ul li:hover::after {
   margin-left: 1rem;
   text-align: center;
 }
-.portifolio-box .card .to-go .read-more-card-text .my-name {
+.portifolio-box .to-go .read-more-card-text .my-name {
   font-weight: 600;
   font-style: italic;
 }
-.portifolio-box .card .to-go a {
+.portifolio-box .to-go a {
   margin-right: 10px;
   text-decoration: none;
   color: white;
   font-size: 12px;
 }
-.portifolio-box .card .to-go a i {
+.portifolio-box .to-go a i {
   font-size: 25px;
 }
-.portifolio-box .card .to-go:hover .read-more {
+.portifolio-box .to-go:hover .read-more {
   font-size: 12px;
   background-color: white;
   border-radius: 15px;
   color: black;
   padding: 5px;
   font-weight: 600;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-center {
+  width: 50%;
+  position: relative;
+  padding: 1rem;
+}
+
+.input-box {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+.input-box .input {
+  margin-bottom: 1rem;
+}
+.input-box .input input, .input-box .input textarea[type=text] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: grey 1px solid;
+  font-size: 14px;
+  color: rgb(41, 40, 40);
+  background-color: rgb(216, 210, 210);
+}
+.input-box .input ::-moz-placeholder {
+  color: rgb(140, 138, 138);
+  font-size: 12px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+.input-box .input ::placeholder {
+  color: rgb(140, 138, 138);
+  font-size: 12px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+.input-box .input input:focus {
+  background-color: white;
+}
+.input-box .input textarea:focus {
+  background-color: var(--second-bg-color);
+}
+.input-box .heading {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+.input-box .btn-container.form {
+  margin-top: 2rem;
+  background-color: var(--btn-color);
+  transition: background-color 0.1s;
+  width: auto;
+}
+.input-box .btn-container.form .form-btn {
+  color: white;
+}
+.input-box .btn-container.form:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  transition: 0.2s;
+  padding-right: 18px;
+  font-weight: 600;
+}
+.input-box .btn-container.form:hover:hover a {
+  color: rgb(0, 0, 0);
 }
 
 * {
