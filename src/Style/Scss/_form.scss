@@ -38,15 +38,15 @@
                 text-transform: uppercase;
             }
 
+        // focus on both input, textarea when typing
         input:focus{
             background-color:white;
         }
 
         textarea:focus{
-            background-color: var(--second-bg-color);
+            background-color:white;
         }
-            
-        }
+    }
        
         .heading{
             color: white;
@@ -79,6 +79,7 @@
             }
         }
     }
+        
 }
       
 

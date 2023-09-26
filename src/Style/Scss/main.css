@@ -328,7 +328,7 @@ header nav ul li:hover::after {
   background-color: white;
 }
 .input-box .input textarea:focus {
-  background-color: var(--second-bg-color);
+  background-color: white;
 }
 .input-box .heading {
   color: white;
