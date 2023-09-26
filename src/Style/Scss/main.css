@@ -190,7 +190,7 @@ header nav ul li:hover::after {
   width: 90%;
   height: auto;
   position: relative;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 .portifolio-box .card img {
   width: inherit;
@@ -223,7 +223,7 @@ header nav ul li:hover::after {
   display: block;
 }
 .portifolio-box .card:hover {
-  transform: scale(0.9);
+  transform: scale(1.1);
 }
 .portifolio-box .to-go {
   margin-top: 2rem;
@@ -280,6 +280,50 @@ header nav ul li:hover::after {
   color: black;
   padding: 5px;
   font-weight: 600;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--btn-color);
+  height: 200px;
+  border-top-left-radius: 50%;
+  position: relative;
+}
+
+.footer-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  text-align: center;
+}
+.footer-content .design, .footer-content .copy-rights {
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+.footer-content .design i, .footer-content .copy-rights i {
+  padding-left: 0.5rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+.footer-content .icons {
+  width: 100%;
+  height: 50px;
+}
+.footer-content .icons a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.footer-content .icons a i {
+  font-size: 24px;
+  margin: 0.5rem;
+}
+.footer-content .icons a i:hover {
+  transition: 0.5s;
+  font-size: 24px;
+  color: white;
 }
 
 .contact {
