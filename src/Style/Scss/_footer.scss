@@ -12,7 +12,6 @@ footer{
     top: 50%;
     transform: translate(-50%,-50%);
     width: 25%;
-   
     text-align: center;
 
     .design, .copy-rights{
@@ -39,9 +38,12 @@ footer{
                 font-size: 24px;
                 margin: 0.5rem;
                 &:hover{
-                    transition: 0.5s;
+                    transition: 0.2s;
                     font-size: 24px;
                     color: white;
+                    
+                    border-radius: 50%;
+                   
                     
                 }
             }

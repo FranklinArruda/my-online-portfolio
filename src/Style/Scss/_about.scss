@@ -9,6 +9,8 @@
 
     p{
         line-height: 1.6em;
+        text-align: justify;
+        
     }
 
 // button
@@ -28,8 +30,8 @@
       transition: 0.2s;
       padding-right: 18px;
       font-weight: 600;
-      
-  
+      box-shadow: 0 5px 10px rgb(255, 255, 255);
+     
       &:hover a{
         color: rgb(0, 0, 0);
       }

@@ -31,13 +31,11 @@ header {
         text-transform: uppercase;
         font-size:14px;
         transition: border-bottom 0.5s linear;
-        
-       /*  &:hover {
-          border-bottom: 1px solid white;
-        } */
       }
     }
 
+
+    // border animation
     nav ul li::after{
       content: "";
       height: 3px;
@@ -52,12 +50,5 @@ header {
     nav ul li:hover::after{
       width: 100%;
     }
-
-
-
-    /* // home 
-    .active{
-      border-bottom: 2.5px solid white;
-    } */
   }
   

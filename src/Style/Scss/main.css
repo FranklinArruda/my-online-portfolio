@@ -5,10 +5,6 @@ header {
   align-items: center;
   padding: 1rem 5rem 1rem 5rem;
   z-index: 100;
-  /* // home 
-  .active{
-    border-bottom: 2.5px solid white;
-  } */
 }
 header a {
   color: white;
@@ -28,9 +24,6 @@ header nav ul li a {
   text-transform: uppercase;
   font-size: 14px;
   transition: border-bottom 0.5s linear;
-  /*  &:hover {
-     border-bottom: 1px solid white;
-   } */
 }
 header nav ul li::after {
   content: "";
@@ -91,7 +84,7 @@ header nav ul li:hover::after {
 
 .btn-container.section1 {
   background-color: var(--second-bg-color);
-  transition: background-color 0.1s;
+  transition: background-color 0.5s;
   /* Initially hide the icon */
   /* Show the icon when hovering over the .btn-container */
 }
@@ -108,6 +101,8 @@ header nav ul li:hover::after {
   background-color: var(--bg-color);
   color: white;
   transition: 0.2s;
+  box-shadow: 0 5px 10px rgb(7, 108, 136);
+  padding-right: 18px;
 }
 .btn-container.section1:hover:hover a {
   color: white;
@@ -138,6 +133,7 @@ header nav ul li:hover::after {
 }
 .about-content p {
   line-height: 1.6em;
+  text-align: justify;
 }
 .about-content .btn-container.section2 {
   margin-top: 2rem;
@@ -153,6 +149,7 @@ header nav ul li:hover::after {
   transition: 0.2s;
   padding-right: 18px;
   font-weight: 600;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 .about-content .btn-container.section2:hover:hover a {
   color: rgb(0, 0, 0);
@@ -223,7 +220,8 @@ header nav ul li:hover::after {
   display: block;
 }
 .portifolio-box .card:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
+  cursor: pointer;
 }
 .portifolio-box .to-go {
   margin-top: 2rem;
@@ -321,9 +319,10 @@ footer {
   margin: 0.5rem;
 }
 .footer-content .icons a i:hover {
-  transition: 0.5s;
+  transition: 0.2s;
   font-size: 24px;
   color: white;
+  border-radius: 50%;
 }
 
 .contact {
@@ -394,6 +393,7 @@ footer {
   transition: 0.2s;
   padding-right: 18px;
   font-weight: 600;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 .input-box .btn-container.form:hover:hover a {
   color: rgb(0, 0, 0);
@@ -439,4 +439,160 @@ section {
   border-radius: 25px;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Your CSS rules for medium screens here */
+  body header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 1rem 2rem;
+    z-index: 100;
+  }
+  body section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 5% 5%;
+  }
+  body .portifolio-img-container {
+    border-radius: 50%;
+    outline: 0.5px solid var(--bg-color);
+    outline-offset: 25px;
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+  }
+  body .portifolio-img-container:hover {
+    transform: scale(1.2); /* Zoom out the image on hover (you can adjust the scale factor) */
+    transition: transform 1.5s ease;
+  }
+  body .portifolio-img-container .portifolio-img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+  body .portifolio-box {
+    margin-top: 2rem;
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 50px;
+    grid-template-columns: auto auto;
+  }
+  body .form-center {
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+  }
+  body .form-center .input-box {
+    width: 80%;
+  }
+}
+/* Media query for mobile devices */
+@media (max-width: 475px) {
+  /* Adjust styles for mobile devices */
+  body {
+    /* .home{
+      display: flex;
+      flex-direction: column;
+
+
+      .home-content{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h3{
+          font-size: 16px;
+        }
+      }
+    }
+
+
+
+    .portifolio-img-container{
+
+      width: 50px;
+      height: auto;
+
+      .portifolio-img{
+        width: inherit;
+        height: auto;
+      }
+    } */
+  }
+  body header {
+    position: relative;
+  }
+  body nav {
+    position: absolute;
+    background-color: var(--bg-color);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border-top: 2px white solid;
+    padding: 0 10% 0;
+  }
+  body nav a {
+    display: block;
+  }
+  body .home {
+    padding: 10px 0 10px 0;
+    border-radius: 0%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text within the section */
+  }
+  body .home-content {
+    position: relative;
+    text-align: center; /* Center-align text within the .home-content div */
+    justify-content: center;
+    align-items: center;
+  }
+  body .home-content p {
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  body .home-social-media {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .btn-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .portifolio-img-container {
+    outline-offset: 25px;
+    margin: 2rem auto;
+    width: 250px;
+    height: 250px;
+  }
+  body .portifolio-img-container .portifolio-img {
+    width: inherit;
+    height: inherit;
+  }
+  body .portifolio-box {
+    margin-top: 2rem;
+    display: grid;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 50px;
+    grid-template-columns: auto;
+  }
+  body .form-center {
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+  }
+  body .form-center .input-box {
+    width: auto;
+  }
+  body .footer-content {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
