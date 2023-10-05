@@ -354,6 +354,7 @@ footer {
   font-size: 14px;
   color: rgb(41, 40, 40);
   background-color: rgb(216, 210, 210);
+  font-family: inherit;
 }
 .input-box .input ::-moz-placeholder {
   color: rgb(140, 138, 138);
@@ -591,6 +592,15 @@ section {
   }
   body .form-center .input-box {
     width: auto;
+  }
+  body .form-center .input-box input, body .form-center .input-box textarea[type=text] {
+    font-size: 16px;
+  }
+  body .form-center .input-box input:focus {
+    border: 2px solid rgb(26, 184, 205);
+  }
+  body .form-center .input-box textarea:focus {
+    border: 2px solid rgb(26, 184, 205);
   }
   body .footer-content {
     width: 100%;

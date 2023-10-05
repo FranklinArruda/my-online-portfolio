@@ -25,6 +25,7 @@
                 font-size: 14px;
                 color: rgb(41, 40, 40);
                 background-color: rgb(216, 210, 210);
+                font-family: inherit; // inherist the global font family
             }
 
             ::placeholder {
