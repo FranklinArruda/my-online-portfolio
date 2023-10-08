@@ -5,6 +5,7 @@
 @import "./contact.scss";
 @import "./footer.scss";
 @import "./form.scss";
+@import "./popup.scss";
 
 // reseting
 * {
@@ -112,9 +113,15 @@ section {
             }
         }
 
+        .popup{
+            width: 50%;
+        }
+        
+
         .footer-content {
             width: 100%;
         }
+
     }
 }
 

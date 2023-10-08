@@ -233,27 +233,27 @@
    <!-- contact section  -->
    <section class="contact" id="contact">
       <div class="form-center">
-         
          <form action="#" method="#">
             <div class="input-box">
                <h4 class="heading"><span>Get in touch...</span></h4> 
                <div class="input">
-                  <input type="text" placeholder="Full Name" id="name" name="name">
+                  <input type="text" placeholder="Full Name" id="name">
                </div>
          
                <div class="input">
-                  <input type="email" placeholder="Email" id="email" name="email">
+                  <input type="email" placeholder="Email" id="email">
                </div>
          
-               <div class="input">
-                  <input type="tel" placeholder="Phone Number" id="contatc" name="phone">
-               </div>
+              <!--  <div class="input">
+                  <input type="number" placeholder="Phone Number" id="contact">
+              </div> -->
+              
          
                <div class="input">
-                  <input class="subject" type="text" placeholder="Subject" id="subject" name="subject">
+                  <input class="subject" type="text" placeholder="Subject" id="subject">
                </div>
                <div class="input">
-                  <textarea type="text" id="input-field" cols="31" rows="8" placeholder="Your Message" name="message"></textarea>
+                  <textarea type="text" id="input-field" cols="31" rows="8" placeholder="Your Message"></textarea>
                </div>
                <div id="btn-send" class="btn-container form">
                  <!--  <button type="submit" class="form-btn">Submit</button> -->
@@ -261,8 +261,18 @@
                </div>
             </div>
          </form>         
-         
       </div>
+
+      <!-- POPUP Message -->
+      <div class="popup">
+         <div class="icon-container"> 
+             <i id="icon-check" class="fa-solid fa-circle-check"></i>
+         </div>
+        
+         <p class="thank-You">Thank You!</p>
+         <p class="message">Your details has been successfully submitted.</p>
+         <button class="popup-btn">OK</button>
+   </div>
    </section>
 
 

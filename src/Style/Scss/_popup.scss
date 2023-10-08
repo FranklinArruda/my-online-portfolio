@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(236, 238, 237);
+}
+
+.popup{
+    position: relative;
+    height:auto;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    display: none; // use JS for it to be displayed
+    /*set animation*/
+    animation:fadeInTop 1s;
+  
+}
+
+
+@keyframes fadeInTop {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.icon-container{
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some spacing below the icon */
+}
+.fa-circle-check{
+    position: absolute;
+    top:-70px; 
+    color:rgb(117, 189, 10);
+    font-size: 70px;
+    font-weight: lighter;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    }
+
+.thank-You{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.message{
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0 32px 0; /* 20px top and bottom, 0 left and right */
+}
+
+button{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: rgb(117, 189, 10);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+
+    &:hover{
+        background-color: rgb(94, 151, 9);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+}

@@ -54,17 +54,17 @@ readMoreCards.forEach(readMoreCard => {
 
 const formBtn = document.getElementById("btn-send");
 formBtn.addEventListener("click",sendEmail);
-function sendEmail(){
+function sendEmail(event){
 
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
-    let contact = document.getElementById("contatc").value;
+    let contact = document.getElementById("contact").value;
     let subject = document.getElementById("subject").value;
     let message = document.getElementById("input-field").value; 
 
-    let body ="Name: " + name + " <br/> Email: " + email + " <br/> Contact : " + contatc +"<br/> Subject: " + subject + "<br/> Message: " + message;
+    let body ="Name: " + name + " <br/> Email: " + email + " <br/> Contact : " + contact +"<br/> Subject: " + subject + "<br/> Message: " + message;
 
-    console.log(body);
+    console.log(body); // testinf porpuses
 
   // Create an HTML-formatted message
   const MSG = `
@@ -108,12 +108,39 @@ Email.send({
     From : "franklin.arrudaa@gmail.com",
     Subject :subject,
     Body : MSG,
-}).then(
+})/* .then(
   message => alert(message)
-);  
+);   */
+
+if(name && email && subject && message){
+  showPopup();
+  event.preventDefault();
+}
+else{
+  alert("Please, all field must be filled out.")
+  event.preventDefault();
+}
 
 };
 
 
 
+const form = document.querySelector(".form-center");
+const popUp = document.querySelector(".popup");
+function showPopup(){
+  popUp.style.display = "block";
+  form.style.display = "none"; 
  
+  
+}
+
+const popupBtn = document.querySelector(".popup-btn");
+popupBtn.addEventListener("click",hidePopup);
+function hidePopup(){
+  popUp.style.display = "none";
+  form.style.display = "block";
+  window.location.reload();
+}
+
+
+
