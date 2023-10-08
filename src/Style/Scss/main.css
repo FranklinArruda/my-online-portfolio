@@ -344,6 +344,8 @@ footer {
 }
 .input-box .input {
   margin-bottom: 1rem;
+  /* capitalize the SUBJECT field */
+  /* Apply common styles to both input and textarea when focused */
 }
 .input-box .input input, .input-box .input textarea[type=text] {
   width: 100%;
@@ -355,6 +357,9 @@ footer {
   color: rgb(41, 40, 40);
   background-color: rgb(216, 210, 210);
   font-family: inherit;
+}
+.input-box .input .subject {
+  text-transform: uppercase;
 }
 .input-box .input ::-moz-placeholder {
   color: rgb(140, 138, 138);
@@ -368,11 +373,10 @@ footer {
   font-family: sans-serif;
   text-transform: uppercase;
 }
-.input-box .input input:focus {
-  background-color: white;
-}
+.input-box .input input:focus,
 .input-box .input textarea:focus {
   background-color: white;
+  border: 2px solid rgb(26, 184, 205);
 }
 .input-box .heading {
   color: white;
@@ -411,9 +415,9 @@ footer {
 }
 
 :root {
-  --bg-color:rgb(9, 100, 123);
+  --bg-color: rgb(9, 100, 123);
   --second-bg-color: #e9e6e6;
-  --btn-color:#288da6;
+  --btn-color: #288da6;
   --font-family: "Poppins", sans-serif;
   --font-size: 16px;
 }
@@ -593,7 +597,8 @@ section {
   body .form-center .input-box {
     width: auto;
   }
-  body .form-center .input-box input, body .form-center .input-box textarea[type=text] {
+  body .form-center .input-box input,
+  body .form-center .input-box textarea[type=text] {
     font-size: 16px;
   }
   body .form-center .input-box input:focus {

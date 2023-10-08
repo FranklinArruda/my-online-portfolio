@@ -1,290 +1,249 @@
-
 @import "./header.scss";
-@import"./home.scss";
-@import"./about.scss";
-@import"./portifolio.scss";
-@import"./contact.scss";
-@import"./footer.scss";
-@import"./form.scss";
+@import "./home.scss";
+@import "./about.scss";
+@import "./portifolio.scss";
+@import "./contact.scss";
+@import "./footer.scss";
+@import "./form.scss";
 
 // reseting
-*{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  outline: none;
-  scroll-behavior: smooth;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
 }
-
 
 // Global variables for colors, fonts, and spacing
 
 :root {
-  //--bg-color: #139c85;
-  --bg-color:rgb(9, 100, 123);
-  --second-bg-color: #e9e6e6;
-  --btn-color:#288da6;
-  --font-family: 'Poppins', sans-serif;
-  --font-size: 16px;
+    //--bg-color: #139c85;
+    --bg-color: rgb(9, 100, 123);
+    --second-bg-color: #e9e6e6;
+    --btn-color: #288da6;
+    --font-family: "Poppins", sans-serif;
+    --font-size: 16px;
 }
 
-
 //I use a pattern background for all and override section by section
-body{
-  font-family: var(--font-family);
-  background-color: var(--bg-color);
-  font-size:var(--font-size);
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    font-size: var(--font-size);
 }
 
 // global section
-section{
-  min-height: 100vh;
-  width: 100%;
-  padding: 10% 10% 5%;
-  }
+section {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10% 10% 5%;
+}
 
-  #menu-icon{
+#menu-icon {
     display: none;
     color: white;
-  }
-
-.btn-container{
-  background-color:var(--btn-color1);
-  width: 165px;
-  padding: 0.5em;
-  text-align: center; 
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-  border: none;
-  border-radius: 25px;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-
-
-@media only screen and (max-width: 768px){
-  /* Your CSS rules for medium screens here */
- 
-  body {
-
-    header {
-      //position: fixed; 
-      display: flex;
-      width:100%;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1rem 1rem 2rem;
-      z-index: 100;
-    }
-
-    section{
-      min-height: 100vh;
-      width: 100%;
-      padding: 5% 5%;
-      }
-
-      .portifolio-img-container {
-        border-radius: 50%;
-        outline: 0.5px solid var(--bg-color);
-        outline-offset: 25px;
-        transition: transform 0.2s ease; /* Add a smooth transition effect */
-        
-        &:hover{  // push both image + outline border OUT
-          transform: scale(1.2); /* Zoom out the image on hover (you can adjust the scale factor) */
-          transition: transform 1.5s ease;
-        }
-      
-        .portifolio-img {
-          width: 200px;
-          height: auto;
-          border-radius: 50%;
-        }
-      }
-
-      .portifolio-box{
-        margin-top: 2rem;
-        display: grid;
-        column-gap: 10px;
-        row-gap:50px;
-        grid-template-columns: auto auto;
-      }
-
-      .form-center{
-        width: 100%;
-        position: relative;
-        padding: 1rem;
-        
-        .input-box{
-          width:80%;
-        }
-    }
-
-    .footer-content{
-      width: 100%;      
-    }
-
-        }
+.btn-container {
+    background-color: var(--btn-color1);
+    width: 165px;
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
 }
-  
 
+@media only screen and (max-width: 768px) {
+    /* Your CSS rules for medium screens here */
 
+    body {
+        header {
+            //position: fixed;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1rem 1rem 2rem;
+            z-index: 100;
+        }
+        section {
+            min-height: 100vh;
+            width: 100%;
+            padding: 5% 5%;
+        }
+        .portifolio-img-container {
+            border-radius: 50%;
+            outline: 0.5px solid var(--bg-color);
+            outline-offset: 25px;
+            transition: transform 0.2s ease; /* Add a smooth transition effect */
 
+            &:hover {
+                // push both image + outline border OUT
+                transform: scale(1.2); /* Zoom out the image on hover (you can adjust the scale factor) */
+                transition: transform 1.5s ease;
+            }
 
+            .portifolio-img {
+                width: 200px;
+                height: auto;
+                border-radius: 50%;
+            }
+        }
+        .portifolio-box {
+            margin-top: 2rem;
+            display: grid;
+            column-gap: 10px;
+            row-gap: 50px;
+            grid-template-columns: auto auto;
+        }
+        .form-center {
+            width: 100%;
+            position: relative;
+            padding: 1rem;
+
+            .input-box {
+                width: 80%;
+            }
+        }
+
+        .footer-content {
+            width: 100%;
+        }
+    }
+}
 
 /* Media query for mobile devices */
 @media (max-width: 475px) {
-  
-body{
-  header{
-    position: relative;
-  }
+    body {
+        header {
+            position: relative;
+        }
 
-  #menu-icon{
-    display: block;
-    color: white;
-  }
+        #menu-icon {
+            display: block;
+            color: white;
+        }
 
-  .nav-bar{
-    position: absolute;
-    background-color:var(--bg-color);
-    top: 100%;
-    left: 0;
-    width: 100%;    
-    border-top: 2px white solid;
-    display: none;
-    background-color: #666666;
- 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  } 
+        .nav-bar {
+            position: absolute;
+            background-color: var(--bg-color);
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border-top: 2px white solid;
+            display: none;
+            background-color: #666666;
 
-  li {
-    margin: 0;
-  }
-    a{
-      color: white;
-      text-decoration: none;
-      display: block;
-      padding: 14px 32px;
-  
-    &:hover{
-      background-color:var(--bg-color);
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            li {
+                margin: 0;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 14px 32px;
+
+                &:hover {
+                    background-color: var(--bg-color);
+                }
+            }
+        }
+        .home {
+            padding: 10px 0 10px 0;
+            border-radius: 0%;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Center-align text within the section */
+        }
+
+        .home-content {
+            position: relative;
+            text-align: center; /* Center-align text within the .home-content div */
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding-left: 2rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .btn-container.section1 {
+            background-color: rgb(226, 223, 223);
+        }
+        .home-social-media {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn-container {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .portifolio-img-container {
+            outline-offset: 25px;
+            margin: 2rem auto;
+            width: 250px;
+            height: 250px;
+
+            .portifolio-img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+
+        .portifolio-box {
+            margin-top: 2rem;
+            display: grid;
+            column-gap: 10px;
+            row-gap: 50px;
+            grid-template-columns: auto;
+        }
+
+        .form-center {
+            width: 100%;
+            position: relative;
+            padding: 1rem;
+            margin: 0;
+            padding: 0;
+
+            .input-box {
+                width: auto;
+
+                input,
+                textarea[type="text"] {
+                    font-size: 16px;
+                }
+
+                input:focus {
+                    border: 2px solid rgb(26, 184, 205);
+                }
+
+                textarea:focus {
+                    border: 2px solid rgb(26, 184, 205);
+                }
+            }
+        }
+
+        .footer-content {
+            width: 100%;
+        }
     }
-  }
-}
- 
-
-
- 
-
-
- 
-
-  
-   
-
-    .home {
-      padding: 10px 0 10px 0;
-      border-radius: 0%;
-      display: block;
-      justify-content: center;
-      align-items: center;
-      text-align: center; /* Center-align text within the section */
-      
-    }
-    
-    .home-content {
-      position: relative;
-      text-align: center; /* Center-align text within the .home-content div */
-      justify-content: center;
-      align-items: center;
-      
-      
-      p{
-        padding-left: 2rem;
-        margin-bottom: 2.5rem;
-        
-      }
-      
-    }
-    
-   
-    .btn-container.section1{
-      background-color: rgb(226, 223, 223);
-    }
-    .home-social-media {
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
-    
-    .btn-container {
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
-
-
-     .portifolio-img-container{
-      
-      outline-offset: 25px;
-      margin: 2rem auto; 
-      width: 250px;
-      height: 250px;
-      
-
-      .portifolio-img{
-        width: inherit;
-        height: inherit;
-        
-      }
-    }
-
-
-
-
-    .portifolio-box{
-      margin-top: 2rem;
-      display: grid;
-      column-gap: 10px;
-      row-gap:50px;
-      grid-template-columns: auto;
-    }
-
-  
-    .form-center{
-      width: 100%;
-      position: relative;
-      padding: 1rem; 
-      margin: 0;
-      padding: 0;
-
-      .input-box{
-        width: auto;
-        
-        input, textarea[type=text]{
-          font-size: 16px;
-          
-      }
-
-      input:focus{
-        border: 2px solid rgb(26, 184, 205);
-    }
-
-    textarea:focus{
-        border: 2px solid rgb(26, 184, 205);
-    }
-        
-      }
-  }
-
-  .footer-content{
-    width: 100%;      
-  }
-  }
 }

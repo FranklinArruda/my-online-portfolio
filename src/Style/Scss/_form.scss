@@ -27,6 +27,10 @@
                 background-color: rgb(216, 210, 210);
                 font-family: inherit; // inherist the global font family
             }
+            /* capitalize the SUBJECT field */
+            .subject{
+                text-transform: uppercase;
+            }
 
             ::placeholder {
                 color: rgb(140, 138, 138);
@@ -36,15 +40,14 @@
             }
 
         // focus on both input, textarea when typing
-        input:focus{
-            background-color:white;
-        }
-
-        textarea:focus{
-            background-color:white;
-        }
+       /* Apply common styles to both input and textarea when focused */
+            input:focus,
+            textarea:focus {
+                background-color: white;
+                border: 2px solid rgb(26, 184, 205);
+            }
     }
-       
+     
         .heading{
             color: white;
             margin-bottom: 2rem;

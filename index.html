@@ -234,29 +234,33 @@
    <section class="contact" id="contact">
       <div class="form-center">
          
-         <form action="">
+         <form action="#" method="#">
             <div class="input-box">
-                <h4 class="heading"><span>Get in touch...</span></h4> 
+               <h4 class="heading"><span>Get in touch...</span></h4> 
                <div class="input">
-                  <input type="text" placeholder="Full Name" required>
+                  <input type="text" placeholder="Full Name" id="name" name="name">
                </div>
-
+         
                <div class="input">
-                  <input type="text" placeholder="Email" required>
+                  <input type="email" placeholder="Email" id="email" name="email">
                </div>
-
+         
                <div class="input">
-                  <input type="text" placeholder="Phone Number" required>
+                  <input type="tel" placeholder="Phone Number" id="contatc" name="phone">
                </div>
-
+         
                <div class="input">
-                  <textarea type="text" id="input-field" cols="31" rows="10" placeholder="Your Message" required></textarea>
+                  <input class="subject" type="text" placeholder="Subject" id="subject" name="subject">
                </div>
-               <div class="btn-container form">
-                  <a href="#" class="form-btn">Submit</a>
+               <div class="input">
+                  <textarea type="text" id="input-field" cols="31" rows="8" placeholder="Your Message" name="message"></textarea>
+               </div>
+               <div id="btn-send" class="btn-container form">
+                 <!--  <button type="submit" class="form-btn">Submit</button> -->
+                 <a type="Submit" href="#" class="form-btn">Submit</a>
                </div>
             </div>
-         </form>
+         </form>         
          
       </div>
    </section>
@@ -274,13 +278,20 @@
          </div>
 
          <div class="icons">
-            <a href=""><i class="fa-regular fa-envelope"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
             <a href="https://github.com/FranklinArruda" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/franklin-arruda-6a679b194/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
          </div>
       </div>
    </footer>
+
+    <!-- Form script to send email -->
+     <script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+   <!-- JS Functions  -->
    <script src="./src/js/script.js"></script>
+   
+  
 </body>
 
 </html>

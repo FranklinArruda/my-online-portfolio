@@ -52,4 +52,68 @@ readMoreCards.forEach(readMoreCard => {
 });
 
 
+const formBtn = document.getElementById("btn-send");
+formBtn.addEventListener("click",sendEmail);
+function sendEmail(){
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let contact = document.getElementById("contatc").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("input-field").value; 
+
+    let body ="Name: " + name + " <br/> Email: " + email + " <br/> Contact : " + contatc +"<br/> Subject: " + subject + "<br/> Message: " + message;
+
+    console.log(body);
+
+  // Create an HTML-formatted message
+  const MSG = `
+  <html>
+      <head>
+          <style>
+              /* Define your CSS styles here */
+              body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f0f0f0;
+              }
+              .container {
+                  max-width: 600px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  background-color: #c0f067;;
+                  border-radius: 5px;
+                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              }
+              h1 {
+                  color: #333;
+              }
+          </style>
+      </head>
+      <body>
+          <div class="container">
+              <h1>Contact Form Submission</h1>
+              <p><strong>Name:</strong>${name}</p>
+              <p><strong>Email:</strong>${email}</p>
+              <p><strong>Phone:</strong>${contact}</p>
+              <p><strong>Subject:</strong>${subject}</p>
+              <p><strong>Message:</strong>${message}</p>
+          </div>
+      </body>
+  </html>
+`;
+     
+Email.send({
+  SecureToken:"5ee25e4c-34da-466e-bf8a-08f44a0bb73f", 
+    To : 'franklin.arrudaa@gmail.com',
+    From : "franklin.arrudaa@gmail.com",
+    Subject :subject,
+    Body : MSG,
+}).then(
+  message => alert(message)
+);  
+
+};
+
+
+
  
