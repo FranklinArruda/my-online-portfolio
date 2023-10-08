@@ -683,6 +683,9 @@ section {
   body .form-center .input-box textarea:focus {
     border: 2px solid rgb(26, 184, 205);
   }
+  body .popup {
+    width: 75%;
+  }
   body .footer-content {
     width: 100%;
   }
