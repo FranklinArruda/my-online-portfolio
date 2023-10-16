@@ -40,7 +40,7 @@ body {
 section {
     min-height: 100vh;
     width: 100%;
-    padding: 10% 10% 5%;
+    padding: 5% 10% 5%;
 }
 
 #menu-icon {
@@ -181,15 +181,27 @@ section {
             justify-content: center;
             align-items: center;
 
+            .hello{
+                font-size: 15px;
+            }
+
+            .name{
+                font-size: 2rem;
+            }
+
+           span{
+            font-size: 1.5rem;
+           }
+
             p {
+                font-size: 1rem;
                 padding-left: 2rem;
                 margin-bottom: 2.5rem;
             }
+           
         }
 
-        .btn-container.section1 {
-            background-color: rgb(226, 223, 223);
-        }
+       
         .home-social-media {
             position: relative;
             top: 50%;

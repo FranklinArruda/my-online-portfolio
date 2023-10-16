@@ -50,5 +50,9 @@ header {
     nav ul li:hover::after{
       width: 100%;
     }
+
+    #menu-icon{
+      cursor: pointer;
+    }
   }
   

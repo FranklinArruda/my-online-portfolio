@@ -2,11 +2,27 @@
 // about content
 .about-content{
     color: white;
-    h2{
+    
+    .about-header{
+      width: 200px;  
+      border-radius: 10px;
+      margin:  auto; /* Center horizontally */
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+
+      .up-header{
+        font-size: 14px;
+        font-weight: lighter;
+      }      
+    }
+    /* h2{
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
-
+ */
     p{
         line-height: 1.6em;
         text-align: justify;

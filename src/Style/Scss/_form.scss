@@ -10,6 +10,23 @@
     }
     
     
+    .contact-header{
+        color: white;
+        width: 200px;  
+        border-radius: 10px;
+        margin: 0 auto; /* Center horizontally */
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+  
+        .up-header{
+          font-size: 14px;
+          font-weight: lighter;
+        }
+    }
+    
    
     
     .input-box{

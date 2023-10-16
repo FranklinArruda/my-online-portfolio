@@ -38,6 +38,9 @@ header nav ul li::after {
 header nav ul li:hover::after {
   width: 100%;
 }
+header #menu-icon {
+  cursor: pointer;
+}
 
 .home {
   display: flex;
@@ -126,10 +129,25 @@ header nav ul li:hover::after {
 
 .about-content {
   color: white;
+  /* h2{
+         font-size: 1.5rem;
+         margin-bottom: 1.5rem;
+     }
+  */
 }
-.about-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+.about-content .about-header {
+  width: 200px;
+  border-radius: 10px;
+  margin: auto; /* Center horizontally */
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.about-content .about-header .up-header {
+  font-size: 14px;
+  font-weight: lighter;
 }
 .about-content p {
   line-height: 1.6em;
@@ -161,9 +179,19 @@ header nav ul li:hover::after {
 .portifolio {
   background-color: var(--second-bg-color);
 }
-.portifolio h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
+.portifolio .portifolio-header {
+  width: 200px;
+  border-radius: 10px;
+  margin: 0 auto; /* Center horizontally */
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.portifolio .portifolio-header .up-header {
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 /* .portifolio-box{
@@ -337,6 +365,22 @@ footer {
   padding: 1rem;
 }
 
+.contact-header {
+  color: white;
+  width: 200px;
+  border-radius: 10px;
+  margin: 0 auto; /* Center horizontally */
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.contact-header .up-header {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
 .input-box {
   width: 80%;
   margin: auto;
@@ -504,7 +548,7 @@ body {
 section {
   min-height: 100vh;
   width: 100%;
-  padding: 10% 10% 5%;
+  padding: 5% 10% 5%;
 }
 
 #menu-icon {
@@ -626,12 +670,19 @@ section {
     justify-content: center;
     align-items: center;
   }
+  body .home-content .hello {
+    font-size: 15px;
+  }
+  body .home-content .name {
+    font-size: 2rem;
+  }
+  body .home-content span {
+    font-size: 1.5rem;
+  }
   body .home-content p {
+    font-size: 1rem;
     padding-left: 2rem;
     margin-bottom: 2.5rem;
-  }
-  body .btn-container.section1 {
-    background-color: rgb(226, 223, 223);
   }
   body .home-social-media {
     position: relative;
