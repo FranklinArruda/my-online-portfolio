@@ -138,7 +138,7 @@ header #menu-icon {
 .about-content .about-header {
   width: 200px;
   margin: auto; /* Center horizontally */
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,10 +186,11 @@ header #menu-icon {
   background-color: var(--second-bg-color);
 }
 .portifolio .portifolio-header {
+  position: relative;
   width: 200px;
   border-radius: 10px;
   margin: 0 auto; /* Center horizontally */
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -375,7 +376,6 @@ footer {
 .form-center {
   width: 50%;
   position: relative;
-  padding: 1rem;
 }
 
 .contact-header {
@@ -383,7 +383,7 @@ footer {
   width: 200px;
   border-radius: 10px;
   margin: 0 auto; /* Center horizontally */
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -392,6 +392,7 @@ footer {
 .contact-header .up-header {
   font-size: 14px;
   font-weight: lighter;
+  margin-top: -15px;
 }
 .contact-header .border-bottom.contact {
   border-radius: 5px;
@@ -646,6 +647,9 @@ section {
   body header {
     position: relative;
   }
+  body header .logo {
+    font-style: italic;
+  }
   body #menu-icon {
     display: block;
     color: white;
@@ -685,6 +689,7 @@ section {
     text-align: center; /* Center-align text within the section */
   }
   body .home-content {
+    margin-top: 1rem;
     position: relative;
     text-align: center; /* Center-align text within the .home-content div */
     justify-content: center;
@@ -721,8 +726,8 @@ section {
     outline: 0.5px solid var(--bg-color);
     outline-offset: 25px;
     margin: 2rem auto;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
   body .portifolio-img-container .portifolio-img {
     width: inherit;

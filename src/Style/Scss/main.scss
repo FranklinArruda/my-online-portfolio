@@ -130,6 +130,9 @@ section {
     body {
         header {
             position: relative;
+            .logo{
+                font-style: italic;
+            }
         }
 
         #menu-icon {
@@ -176,6 +179,7 @@ section {
         }
 
         .home-content {
+            margin-top: 1rem;
             position: relative;
             text-align: center; /* Center-align text within the .home-content div */
             justify-content: center;
@@ -187,9 +191,7 @@ section {
 
             .name{
                 font-size: 2rem;
-               
             }
-
            span{
             font-size: 1.5rem;
             font-size: 18px;
@@ -223,8 +225,8 @@ section {
             outline: 0.5px solid var(--bg-color);
             outline-offset: 25px;
             margin: 2rem auto;
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
 
             .portifolio-img {
                 width: inherit;
