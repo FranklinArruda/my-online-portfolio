@@ -187,10 +187,13 @@ section {
 
             .name{
                 font-size: 2rem;
+               
             }
 
            span{
             font-size: 1.5rem;
+            font-size: 18px;
+            
            }
 
             p {
@@ -217,10 +220,11 @@ section {
         }
 
         .portifolio-img-container {
+            outline: 0.5px solid var(--bg-color);
             outline-offset: 25px;
             margin: 2rem auto;
-            width: 250px;
-            height: 250px;
+            width: 150px;
+            height: 150px;
 
             .portifolio-img {
                 width: inherit;
@@ -265,9 +269,31 @@ section {
             width: 75%;
         }
         
-        
+        // footer
+      footer{
+        overflow: hidden;
+        height: 100px;
+        border-radius: initial;  
+
         .footer-content {
+           
+            position: relative;
+            padding-top: 2rem;
             width: 100%;
+            
+            .foot{
+                margin: 0;
+                padding: 0;
+                font-size: 12px;
+            }
+
+            .foot.icons a i{
+                font-size: 16px;
+            }
+            
+            
         }
+      }
+        
     }
 }

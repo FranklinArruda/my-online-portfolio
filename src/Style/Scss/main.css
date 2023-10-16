@@ -137,7 +137,6 @@ header #menu-icon {
 }
 .about-content .about-header {
   width: 200px;
-  border-radius: 10px;
   margin: auto; /* Center horizontally */
   margin-bottom: 3rem;
   display: flex;
@@ -148,6 +147,13 @@ header #menu-icon {
 .about-content .about-header .up-header {
   font-size: 14px;
   font-weight: lighter;
+}
+.about-content .about-header .border-bottom.about {
+  border-radius: 5px;
+  margin-top: 1rem;
+  border-bottom: 5px solid var(--bg-color);
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
 .about-content p {
   line-height: 1.6em;
@@ -192,6 +198,13 @@ header #menu-icon {
 .portifolio .portifolio-header .up-header {
   font-size: 14px;
   font-weight: lighter;
+}
+.portifolio .portifolio-header .border-bottom.portifolio {
+  border-radius: 5px;
+  margin-top: 1rem;
+  border-bottom: 5px solid var(--second-bg-color);
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* .portifolio-box{
@@ -379,6 +392,13 @@ footer {
 .contact-header .up-header {
   font-size: 14px;
   font-weight: lighter;
+}
+.contact-header .border-bottom.contact {
+  border-radius: 5px;
+  margin-top: 1rem;
+  border-bottom: 5px solid var(--bg-color);
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .input-box {
@@ -678,6 +698,7 @@ section {
   }
   body .home-content span {
     font-size: 1.5rem;
+    font-size: 18px;
   }
   body .home-content p {
     font-size: 1rem;
@@ -697,10 +718,11 @@ section {
     transform: translate(-50%, -50%);
   }
   body .portifolio-img-container {
+    outline: 0.5px solid var(--bg-color);
     outline-offset: 25px;
     margin: 2rem auto;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
   body .portifolio-img-container .portifolio-img {
     width: inherit;
@@ -737,7 +759,22 @@ section {
   body .popup {
     width: 75%;
   }
-  body .footer-content {
+  body footer {
+    overflow: hidden;
+    height: 100px;
+    border-radius: initial;
+  }
+  body footer .footer-content {
+    position: relative;
+    padding-top: 2rem;
     width: 100%;
+  }
+  body footer .footer-content .foot {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  body footer .footer-content .foot.icons a i {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */
