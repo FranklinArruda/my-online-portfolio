@@ -278,11 +278,11 @@ header #menu-icon {
 .portifolio-box .to-go .read-more-card-text {
   font-size: 14px;
   z-index: 100;
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 0;
   width: 125%;
-  height: auto;
+  height: 200px;
+  overflow: scroll;
   display: none;
   background-color: rgb(225, 225, 225);
   color: black;
@@ -402,12 +402,16 @@ footer {
 }
 
 .input-box {
-  width: 80%;
-  margin: auto;
+  width: 70%;
+  margin: 20px auto;
   padding: 1rem;
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
 }
 .input-box .input {
-  margin-bottom: 1rem;
+  position: relative;
+  width: 80%;
+  margin: 15px auto;
   /* capitalize the SUBJECT field */
   /* Apply common styles to both input and textarea when focused */
 }
@@ -415,11 +419,10 @@ footer {
   width: 100%;
   border: none;
   padding: 10px;
-  border-radius: 5px;
   border-bottom: grey 1px solid;
+  border-radius: 5px;
   font-size: 14px;
-  color: rgb(41, 40, 40);
-  background-color: rgb(216, 210, 210);
+  background-color: inherit;
   font-family: inherit;
 }
 .input-box .input .subject {
@@ -439,24 +442,31 @@ footer {
 }
 .input-box .input input:focus,
 .input-box .input textarea:focus {
-  background-color: white;
-  border: 2px solid rgb(26, 184, 205);
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border-radius: 5px;
 }
-.input-box .heading {
+
+.heading {
   color: white;
   margin-bottom: 2rem;
   font-size: 24px;
 }
-.input-box .btn-container.form {
-  margin-top: 2rem;
+
+.btn-container.form {
+  margin: auto;
   background-color: var(--btn-color);
   transition: background-color 0.1s;
-  width: auto;
+  width: 50%; /* Adjust the width of the container */
 }
-.input-box .btn-container.form .form-btn {
+.btn-container.form .form-btn {
+  text-align: center;
   color: white;
+  text-align: center;
+  display: block;
+  width: 100%; /* Adjust the width of the button */
 }
-.input-box .btn-container.form:hover {
+.btn-container.form:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   transition: 0.2s;
@@ -464,8 +474,27 @@ footer {
   font-weight: 600;
   box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
-.input-box .btn-container.form:hover:hover a {
+.btn-container.form:hover:hover a {
   color: rgb(0, 0, 0);
+}
+
+/* Default text color for error message */
+/*  If you are validating additional fields and 
+want to apply the same red text color for error
+ messages, you would indeed use a similar rule for each corresponding error message element in your HTML.  */
+#name-error, #email-error, #phone-error, #subject-error, #textarea-error {
+  color: red;
+  font-size: small;
+}
+
+.form-center .input-box .input .valid {
+  border-color: #05ad64;
+  border-width: 2px;
+}
+
+.form-center .input-box .input .invalid {
+  border-width: 2px; /* You can adjust this value to make the border thicker */
+  border-color: red;
 }
 
 body {
@@ -553,7 +582,7 @@ button:hover {
 
 :root {
   --bg-color: rgb(9, 100, 123);
-  --second-bg-color: #e9e6e6;
+  --second-bg-color: #edecec;
   --btn-color: #288da6;
   --font-family: "Poppins", sans-serif;
   --font-size: 16px;
@@ -750,15 +779,30 @@ section {
   body .form-center .input-box {
     width: auto;
   }
+  body .form-center .input-box input:focus,
+  body .form-center .input-box textarea:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border-radius: 5px;
+  }
   body .form-center .input-box input,
   body .form-center .input-box textarea[type=text] {
     font-size: 16px;
   }
-  body .form-center .input-box input:focus {
-    border: 2px solid rgb(26, 184, 205);
-  }
+  body .form-center .input-box input:focus,
   body .form-center .input-box textarea:focus {
-    border: 2px solid rgb(26, 184, 205);
+    outline: none;
+  }
+  body .btn-container.form {
+    margin: 50px auto;
+    width: 100%; /* Adjust the width of the container */
+  }
+  body .btn-container.form .form-btn {
+    text-align: center;
+    color: white;
+    text-align: center;
+    display: block;
+    width: 100%; /* Adjust the width of the button */
   }
   body .popup {
     width: 75%;

@@ -4,23 +4,34 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Franklin portifolio</title>
-   <!--Google fonts link-->
+   <title>Franklin Portfolio</title>
+
+   <!-- Google Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+
+   <!-- External Stylesheets -->
    <link rel="stylesheet" href="./src/Style/Scss/main.css">
-   <!--Awesome Icons link-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+
+   <!-- Font Awesome Icons -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <!-- script -->
+   <!-- JavaScript libraries -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
+   <!-- Custom JavaScript -->
+   <script defer type="module" src="./src/js/_main.js"></script>
+   <script  defer src="./src/Js/formValidation.js"></script>
 </head>
 
-<body>
 
+<body>
+   
    <!-- header -->
    <header>
       <a href="#" class="logo"><span>Franklin </span>Arruda Cirino</a>
@@ -61,10 +72,6 @@
          <img class="portifolio-img" src="./assets/portifolio-img/portifolio-img.jpg" alt="Portfolio image">
       </div>
    </section>
-
-
-
-
 
 
 
@@ -248,34 +255,42 @@
             <h2 class="down-header">Contact Me</h2>
             <span class="border-bottom contact"></span>
          </div>
+
          <form action="#" method="#">
             <div class="input-box">
                <!-- <h4 class="heading"><span>Get in touch...</span></h4>  -->
                
                <div class="input">
-                  <input type="text" placeholder="Full Name" id="name">
+                  <input type="text" placeholder="Full Name" id="name" autocomplete="off" onkeyup="validateName()">
+                  <div id="name-error"></div>
                </div>
          
                <div class="input">
-                  <input type="email" placeholder="Email" id="email">
+                  <input type="email" placeholder="Email" id="email" autocomplete="off" onkeyup="validateEmail()">
+                  <div id="email-error"></div>
                </div>
          
-              <!--  <div class="input">
-                  <input type="number" placeholder="Phone Number" id="contact">
-              </div> -->
+               <div class="input">
+                  <input type="tel" placeholder="Phone Number" id="phone" autocomplete="off" onkeyup="validatePhoneNumber()">
+                  <div id="phone-error"></div> 
+               </div>
+           
+               <div class="input">
+                  <input class="subject" type="text" placeholder="Subject" id="subject" autocomplete="off" onkeyup="validateSubject()">
+                  <div id="subject-error"></div>
+               </div>
+
+               <div class="input">
+                  <textarea type="text" id="text-area" cols="31" rows="8" placeholder="Your Message" autocomplete="off" onkeyup="validateTextarea()"></textarea>
+                  <div id="textarea-error"></div>
+               </div>
+               
               
-         
-               <div class="input">
-                  <input class="subject" type="text" placeholder="Subject" id="subject">
-               </div>
-               <div class="input">
-                  <textarea type="text" id="input-field" cols="31" rows="8" placeholder="Your Message"></textarea>
-               </div>
-               <div id="btn-send" class="btn-container form">
-                 <!--  <button type="submit" class="form-btn">Submit</button> -->
-                 <a type="Submit" href="#" class="form-btn">Submit</a>
-               </div>
             </div>
+            <div id="btn-send" class="btn-container form">
+               <!--  <button type="submit" class="form-btn">Submit</button> -->
+               <a type="Submit" href="#" class="form-btn">Submit</a>
+             </div>
          </form>         
       </div>
 
@@ -311,13 +326,7 @@
       </div>
    </footer>
 
-    <!-- Form script to send email -->
-     <script src="https://smtpjs.com/v3/smtp.js"></script> 
-
-   <!-- JS Functions  -->
-   <script src="./src/js/script.js"></script>
    
-  
 </body>
 
 </html>

@@ -2,14 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
     .form-center{
         width: 50%;
-        position: relative;
-         
+        position: relative;  
+    
     }
-    
-    
+
+
     .contact-header{
         color: white;
         width: 200px;  
@@ -35,31 +36,46 @@
           }
     }
     
+
+
+
+   
    
     
     .input-box{
-        width:80%;
-        margin: auto; // centering the center
-        padding: 1rem;
         
+        width:70%;
+        margin: 20px auto; 
+        padding: 1rem;
+        background-color: var(--second-bg-color);
+        border-radius: 10px;
+            
         .input{
-            margin-bottom: 1rem;
+            position: relative;
+            width: 80%;
+            margin: 15px auto;
+            
 
             input, textarea[type=text]{
                 width: 100%;
                 border: none;
                 padding: 10px;
-                border-radius: 5px;
+               // border-radius: 5px;
                 border-bottom: grey 1px solid;
+                border-radius: 5px;
                 font-size: 14px;
-                color: rgb(41, 40, 40);
-                background-color: rgb(216, 210, 210);
+               // color: rgb(41, 40, 40);
+                background-color: inherit;
                 font-family: inherit; // inherist the global font family
             }
+
+           
+            
             /* capitalize the SUBJECT field */
             .subject{
                 text-transform: uppercase;
             }
+        
 
             ::placeholder {
                 color: rgb(140, 138, 138);
@@ -72,10 +88,15 @@
        /* Apply common styles to both input and textarea when focused */
             input:focus,
             textarea:focus {
-                background-color: white;
-                border: 2px solid rgb(26, 184, 205);
+                background-color: rgb(255, 255, 255);
+                outline: none; // to help validation with JS
+                //border: 2px solid rgb(26, 184, 205);
+                border-radius: 5px;
+                
             }
     }
+
+}
      
         .heading{
             color: white;
@@ -83,33 +104,59 @@
             font-size: 24px;
         }
 
-
-            // button
-        .btn-container.form{
-        margin-top: 2rem;
-        background-color:var(--btn-color);
-        transition: background-color 0.1s;
-        width: auto;
-        .form-btn{
-        color:white;
-        }
-
-        &:hover{
-            background-color:rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            transition: 0.2s;
-            padding-right: 18px;
-            font-weight: 600;
-            box-shadow: 0 5px 10px rgb(255, 255, 255);
-            
-
-            &:hover a{
-            color: rgb(0, 0, 0);
+        .btn-container.form {
+            margin: auto;
+            background-color: var(--btn-color);
+            transition: background-color 0.1s;
+            width: 50%; /* Adjust the width of the container */
+        
+            .form-btn {
+                text-align: center;
+                color: white;
+                text-align: center;
+                display: block;
+                width: 100%; /* Adjust the width of the button */
+            }
+        
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                transition: 0.2s;
+                padding-right: 18px;
+                font-weight: 600;
+                box-shadow: 0 5px 10px rgb(255, 255, 255);
+        
+                &:hover a {
+                    color: rgb(0, 0, 0);
+                }
             }
         }
-    }
         
+
+
+     
+ /* Default text color for error message */
+
+ /*  If you are validating additional fields and 
+ want to apply the same red text color for error
+  messages, you would indeed use a similar rule for each corresponding error message element in your HTML.  */
+  #name-error, #email-error, #phone-error, #subject-error, #textarea-error {
+    color: red;
+    font-size: small;
 }
+.form-center .input-box .input .valid {
+    border-color: #05ad64;
+    border-width: 2px;
+}
+
+.form-center .input-box .input .invalid {
+    border-width: 2px; /* You can adjust this value to make the border thicker */
+    border-color:red;
+}
+
+
+        
+
       
 
     

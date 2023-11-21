@@ -1,3 +1,12 @@
+-How To Wireframe A Website
+
+https://elementor.com/blog/wireframe-website/
+
+
+-Checklist for Website Project
+
+https://elementor.com/blog/project-management-checklist/?utm_source=google&utm_medium=cpc&utm_campaign=11138809851&utm_term=&gclid=Cj0KCQjw7uSkBhDGARIsAMCZNJuvfK6CwHokmRldana-32C23Oi3KgmNWsAlG7sV74DYH7ZsfmvcWo8aArYKEALw_wcB
+
 PORTIFOLIO TAKEWAY:
 
 1- What do you want to build:
@@ -52,3 +61,7 @@ PORTIFOLIO TAKEWAY:
 	* PAGe per page
 
 6- JS 
+
+	* Create a main.js that embeded to HTML 
+	
+	* Then creates files .js mathcing the section you want to target like( form validation) then have that function Exported to the main.js by using SE6 modules.

@@ -23,7 +23,7 @@
 :root {
     //--bg-color: #139c85;
     --bg-color: rgb(9, 100, 123);
-    --second-bg-color: #e9e6e6;
+    --second-bg-color: #edecec;
     --btn-color: #288da6;
     --font-family: "Poppins", sans-serif;
     --font-size: 16px;
@@ -252,20 +252,43 @@ section {
             .input-box {
                 width: auto;
 
+                input:focus,
+                textarea:focus {
+                    background-color: rgb(255, 255, 255);
+                    outline: none; // to help validation with JS
+                    //border: 2px solid rgb(26, 184, 205);
+                    border-radius: 5px;
+                    
+                }
+                
                 input,
                 textarea[type="text"] {
                     font-size: 16px;
                 }
-
-                input:focus {
-                    border: 2px solid rgb(26, 184, 205);
-                }
-
+                input:focus,
                 textarea:focus {
-                    border: 2px solid rgb(26, 184, 205);
+                    outline: none; // to help validation with JS                    
                 }
+
+                
             }
         }
+
+        .btn-container.form {
+            margin:50px auto;
+            width: 100%; /* Adjust the width of the container */
+            
+            .form-btn {
+                
+                text-align: center;
+                color: white;
+                text-align: center;
+                display: block;
+                width: 100%; /* Adjust the width of the button */
+            }
+        }
+        
+
 
         .popup{
             width: 75%;

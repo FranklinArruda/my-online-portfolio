@@ -103,7 +103,6 @@
 
     // read more & go (link)          
     .to-go{
-       
         margin-top: 2rem;
         justify-content: center;
         align-items: center;
@@ -117,11 +116,11 @@
         .read-more-card-text{
             font-size: 14px;
             z-index: 100;
-            position: absolute;
+            position: relative;
             top: 0;
-            left: 0;
             width: 125%;
-            height: auto;
+            height: 200px;
+            overflow:scroll;
             display: none;
             background-color:rgb(225, 225, 225);
             color: black;
