@@ -1,9 +1,12 @@
 const phoneInputField = document.querySelector("#phone");
 
+console.log("Initializing intlTelInput...");
 const phoneInput = window.intlTelInput(phoneInputField, {
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     initialCountry: "IE", // Set the country code for Ireland
 });
+
+console.log("intlTelInput initialized:", phoneInput);
 
 
 
@@ -18,7 +21,7 @@ function sendEmail(event) {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const subject = document.getElementById("subject").value.trim();
-    const message = document.getElementById("input-field").value.trim();
+    const message = document.getElementById("text-area").value.trim();
 
     const body =
         " Name: " + name +
