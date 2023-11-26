@@ -41,6 +41,7 @@
 
  //box container
 .portifolio-box{
+    position: relative;
     margin-top: 2rem;
     display: grid;
     column-gap: 10px;
@@ -116,11 +117,12 @@
             height: auto;
         }
         .read-more-card-text{
-            font-size: 14px;
+            position: absolute;
             z-index: 100;
-            position: relative;
-            top: 0;
-            width: 125%;
+            left: 10px;
+            bottom: 5px;
+            font-size: 14px;
+            width: 100%;
             height: 200px;
             overflow:scroll;
             display: none;
