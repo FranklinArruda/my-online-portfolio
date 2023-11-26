@@ -97,6 +97,9 @@
     }
 
 }
+
+
+
      
         .heading{
             color: white;
@@ -130,6 +133,10 @@
                     color: rgb(0, 0, 0);
                 }
             }
+
+
+
+            
         }
         
 
@@ -155,6 +162,15 @@
 }
 
 
+// google reCAPCTHA VALIDATION set to display none
+// when user clicks submits will display block to check 
+.g-recaptcha{
+    margin: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
         
 
       

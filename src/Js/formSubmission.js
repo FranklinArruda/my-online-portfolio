@@ -1,43 +1,50 @@
-const phoneInputField = document.querySelector("#phone");
 
-console.log("Initializing intlTelInput...");
-const phoneInput = window.intlTelInput(phoneInputField, {
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-    initialCountry: "IE", // Set the country code for Ireland
-});
+import { eventListenersFormValidation } from "./formValidation.js";
 
-console.log("intlTelInput initialized:", phoneInput);
-
-
-
-function sendEmail(event) {
-    event.preventDefault();
-    /*  // Get the values using the getInputValues function
-     const { name, email, phone, subject, message } = getInputValues(); */
-
-    // Get the formatted phone number with the country code
-    const phoneNumber = phoneInput.getNumber();
+// Function to get values of input fields
+function getInputValues() {
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const subject = document.getElementById("subject").value.trim();
     const message = document.getElementById("text-area").value.trim();
 
-    const body =
-        " Name: " + name +
-        " <br/> Email: " + email +
-        " <br/> Contact : " + phoneNumber +
-        "<br/> Subject: " + subject +
-        "<br/> Message: " + message;
+    return {
+        name,
+        email,
+        subject,
+        message,
+    };
+};
 
-    console.log(body); // For testing purposes
+// phone number is separate because of the country code labrary 
+const phoneInput = document.getElementById("phone");
 
-    // Create an HTML-formatted message
-    const MSG = `
+const phoneCode = window.intlTelInput(phoneInput, {
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    initialCountry: "IE", // Set the country code for Ireland
+});
+
+// validation functions 
+eventListenersFormValidation();
+
+
+// send email form
+function sendEmail() {
+
+    // get phone number
+    const phoneNumber = phoneCode.getNumber();
+
+    // Extract values from the returned object
+    const inputValues = getInputValues();
+    const { name, email, subject, message } = inputValues; 
+    console.log("testing ok")
+   // Create an HTML-formatted message
+    const bodyMessage = `
         <html>
             <head>
                 <style>
-                    /* Define your CSS styles here */
+                    
                     body {
                         font-family: Arial, sans-serif;
                         background-color: #f0f0f0;
@@ -75,40 +82,74 @@ function sendEmail(event) {
         To: 'franklin.arrudaa@gmail.com',
         From: "franklin.arrudaa@gmail.com",
         Subject: subject,
-        Body: MSG,
-    });
+        Body: bodyMessage,
+    }); 
+};
 
-    if (name && email && subject && phoneNumber && message) {
-        showPopup();
+const formCenter = document.querySelector(".form-center");
 
-    } else {
-        alert("Please, all fields must be filled out.");
-
-    }
-}
-
-
-
-// Popup display once the form is filled out
-const form = document.querySelector(".form-center");
-const popUp = document.querySelector(".popup");
-
+// show pop up when form is filled out and reCAPCHA is checked
 function showPopup() {
     popUp.style.display = "block";
-    form.style.display = "none";
+    formCenter.style.display = "none";
 }
 
-// Page reload when OK is pressed in the popup
+// hides pop up when all is well and checked. 
+// Then pages reload it again
+function hidePopup() {
+    popUp.style.display = "none";
+    formCenter.style.display = "block";
+    // Reset the form instead of reloading the page
+    window.location.reload();
+};
+
+
+
+const reCAPCHA = document.querySelector(".g-recaptcha");
+function showRECAPTCHA(){
+    reCAPCHA.style.display = "flex"
+};
+
+function hideRECAPTCHA(){
+    reCAPCHA.style.display = "none"
+};
+
+
+const popUp = document.querySelector(".popup");
+const form = document.querySelector(".form-btn");
+
+form.addEventListener("click", (event) => {
+    event.preventDefault();
+      
+    // Check if reCAPTCHA is completed
+    var response = grecaptcha.getResponse();
+
+    // Extract values from the returned object
+    const inputValues = getInputValues();
+    const { name, email, subject, message } = inputValues; 
+
+    if (!(name && email && phoneInput && subject && message)) {
+        alert("All the fields must be filled out!!!");
+        return false;
+    } 
+
+    else if (!response) {
+        // If not completed, display an error message or take appropriate action
+        showRECAPTCHA();
+        alert("Please mplete the reCAPTCHA.");
+        return false;
+      } 
+    else {
+        hideRECAPTCHA();
+        sendEmail();
+        showPopup();
+        return true;
+    }
+});
+
 const popupBtn = document.querySelector(".popup-btn");
 popupBtn.addEventListener("click", hidePopup);
 
-function hidePopup() {
-    popUp.style.display = "none";
-    form.style.display = "block";
-    window.location.reload();
-}
 
 
-export {
-    sendEmail
-}
+ 

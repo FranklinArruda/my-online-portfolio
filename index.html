@@ -11,7 +11,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
 
-   <!-- External Stylesheets -->
+   <!-- External Stylesheets COUNTRY CODE FOR FORMS -->
    <link rel="stylesheet" href="./src/Style/Scss/main.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
 
@@ -21,17 +21,25 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
 
    <!-- JavaScript libraries -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <!-- Send email using 'SMTPJS' -->
    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
 
-  
+   <!--  Country code 'international number' + css -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+   <!--  scroll reveal library link -->
+   <script src="https://unpkg.com/scrollreveal"></script>
+
+   <!-- google recaptcha (tutorial link: https://www.youtube.com/watch?v=S-E1Z-mRvRY&ab_channel=WebDevTutorials) -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
 </head>
 
 
 <body>
    
    <!-- header -->
-   <header>
+   <header class="header">
       <a href="#" class="logo"><span>Franklin </span>Arruda Cirino</a>
       <i class="fa-solid fa-bars" id="menu-icon"></i>
       <nav class="nav-bar">
@@ -61,7 +69,8 @@
                   class="fa-brands fa-linkedin"></i></a>
          </div>
          <div class="btn-container section1">
-            <a href="./assets/cv-pdf/FRANKLIN_CV.pdf" download>Download CV</a>
+            <!-- <a href="./assets/cv-pdf/FRANKLIN_CV.pdf" download>Download CV</a> -->
+             CV will be posted soon!!!
             <i class="fa-solid fa-download"></i>
          </div>
       </div>
@@ -82,42 +91,43 @@
 
    <!-- about section  -->
    <section class="about" id="about">
-      <div class="about-content">
+      
          <div class="about-header">
             <h2 class="up-header">Get to Know More</h2>
             <h2 class="down-header">About Me</h2>
             <span class="border-bottom about"></span>
          </div>
 
-         <p>I embarked on my coding journey as a naive computer science student with absolutely no prior experience or
-            knowledge. During my first year, I often considered giving up due to the overwhelming number of tools,
-            software, and projects available out there.</p><br>
+         <div class="about-content">
+            <p>I embarked on my coding journey as a naive computer science student with absolutely no prior experience or
+               knowledge. During my first year, I often considered giving up due to the overwhelming number of tools,
+               software, and projects available out there.</p><br>
 
-         <p>Entering my second year in the Bachelor's Degree program in computer science and information technology, I
-            decided to take matters into my own hands and leverage my skills in Excel. As an international student
-            studying abroad, staying organized was crucial to my success. So I created a set of impressive spreadsheets
-            that served a dual purpose: helping me manage my expenses and organizing my studies as well as my personal
-            life.</p><br>
-         <div class="read-more-text">
-            <p>Inspired by the effectiveness of my spreadsheets, I came up with an idea to expand their utility. I
-               envisioned creating personal projects based on these spreadsheets that could be shared with fellow
-               international students facing similar challenges. By transforming my spreadsheets into practical tools, I
-               aimed to provide valuable resources to others navigating life abroad.</p><br>
+            <p>Entering my second year in the Bachelor's Degree program in computer science and information technology, I
+               decided to take matters into my own hands and leverage my skills in Excel. As an international student
+               studying abroad, staying organized was crucial to my success. So I created a set of impressive spreadsheets
+               that served a dual purpose: helping me manage my expenses and organizing my studies as well as my personal
+               life.</p><br>
+            <div class="read-more-text">
+               <p>Inspired by the effectiveness of my spreadsheets, I came up with an idea to expand their utility. I
+                  envisioned creating personal projects based on these spreadsheets that could be shared with fellow
+                  international students facing similar challenges. By transforming my spreadsheets into practical tools, I
+                  aimed to provide valuable resources to others navigating life abroad.</p><br>
 
-            <p>Since more than half of my classmates at college are from abroad, my goal has been to provide practical
-               resources and support for international students such as guiding them on how to be more organized,
-               adjusting taxes on Revenue and so forth. I'm truly passionate about creating impactful projects that
-               benefit this community.</p><br>
+               <p>Since more than half of my classmates at college are from abroad, my goal has been to provide practical
+                  resources and support for international students such as guiding them on how to be more organized,
+                  adjusting taxes on Revenue and so forth. I'm truly passionate about creating impactful projects that
+                  benefit this community.</p><br>
 
-            <p>Since then, I've pushed myself to enter the industry as a front-end or back-end developer through
-               internships, showcasing my personal projects. Despite the challenges of being a beginner, and as I am a
-               self-taught English student. I've always believed in the possibility of success. Now, I'm ready to
-               embrace discomfort once more and pursue my goals to become a Developer.</p>
+               <p>Since then, I've pushed myself to enter the industry as a front-end or back-end developer through
+                  internships, showcasing my personal projects. Despite the challenges of being a beginner, and as I am a
+                  self-taught English student. I've always believed in the possibility of success. Now, I'm ready to
+                  embrace discomfort once more and pursue my goals to become a Developer.</p>
+            </div>
+            <div class="btn-container section2">
+               <a href="#" class="read-more-btn">Read more...</a>
+            </div>
          </div>
-         <div class="btn-container section2">
-            <a href="#" class="read-more-btn">Read more...</a>
-         </div>
-      </div>
    </section>
 
 
@@ -142,7 +152,7 @@
       </div>
       
 
-      <p>These projects are a snapshot of what I've been up to, and I'll keep tossing in new ones as I keep on learning
+      <p >These projects are a snapshot of what I've been up to, and I'll keep tossing in new ones as I keep on learning
          and coding. My passion for this stuff just keeps me going! </p>
 
       <!--  box -->
@@ -254,42 +264,47 @@
             <span class="border-bottom contact"></span>
          </div>
 
-         <form action="#" method="#">
+         
+         <form id="form" action="?" method="POST">
             <div class="input-box">
                <!-- <h4 class="heading"><span>Get in touch...</span></h4>  -->
                
                <div class="input">
-                  <input type="text" placeholder="Full Name" id="name" autocomplete="off" onkeyup="validateName()">
+                  <input type="text" placeholder="Full Name" id="name" autocomplete="off">
                   <div id="name-error"></div>
                </div>
          
                <div class="input">
-                  <input type="email" placeholder="Email" id="email" autocomplete="off" onkeyup="validateEmail()">
+                  <input type="email" placeholder="Email" id="email" autocomplete="off">
                   <div id="email-error"></div>
                </div>
          
                <div class="input">
-                  <input type="tel" placeholder="Phone Number" id="phone" autocomplete="off" onkeyup="validatePhoneNumber()">
+                  <input type="tel" placeholder="Phone Number" id="phone" autocomplete="off">
                   <div id="phone-error"></div> 
                </div>
            
                <div class="input">
-                  <input class="subject" type="text" placeholder="Subject" id="subject" autocomplete="off" onkeyup="validateSubject()">
+                  <input class="subject" type="text" placeholder="Subject" id="subject" autocomplete="off">
                   <div id="subject-error"></div>
                </div>
 
                <div class="input">
-                  <textarea type="text" id="text-area" cols="31" rows="8" placeholder="Your Message" autocomplete="off" onkeyup="validateTextarea()"></textarea>
+                  <textarea type="text" id="text-area" cols="31" rows="8" placeholder="Your Message" autocomplete="off"></textarea>
                   <div id="textarea-error"></div>
                </div>
-               
-              
             </div>
+
+          <!--   recaptcha -->
+           <div class="g-recaptcha" data-sitekey="6Le0NhkpAAAAAJZodk538XegGEhU_XPebpghVVpC"></div>       
             <div id="btn-send" class="btn-container form">
                <!--  <button type="submit" class="form-btn">Submit</button> -->
                <a type="Submit" href="#" class="form-btn">Submit</a>
              </div>
-         </form>         
+             
+         </form>   
+          <!-- Add the reCAPTCHA widget -->
+
       </div>
 
       <!-- POPUP Message -->
@@ -302,6 +317,8 @@
          <p class="message">Your details has been successfully submitted.</p>
          <button class="popup-btn">OK</button>
    </div>
+
+     
    </section>
 
 
@@ -321,12 +338,21 @@
             <a href="https://github.com/FranklinArruda" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/franklin-arruda-6a679b194/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
          </div>
+      
+      
+         
       </div>
+      <!-- scroll up button -->
+    <span class="scroll-up">
+     <a href="#home"><i class="fa-solid fa-caret-up"></i></a>  
+</span>
+      
    </footer>
 
+   
     <!-- Custom JavaScript -->
-    <script  type="module" src="./src/Js/main.js"></script>
-    <script  src="./src/Js/formValidation.js"></script>
+    <script  type="module" src="./src/Js/main.js"></script>  
+    <script type="module" src="./src/Js/formSubmission.js"></script> 
 </body>
 
 </html>

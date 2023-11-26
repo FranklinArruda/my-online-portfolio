@@ -4,10 +4,49 @@ footer{
     height: 200px;
     border-top-left-radius: 50%;
     position: relative;
-}
+    
+
+    // scroll up button
+    .scroll-up{
+        position: absolute;
+        bottom: 35px;
+        right: 40px;
+
+        a {
+            text-decoration: none;
+           
+            i{
+                font-size: 25px;
+                color: black;
+                width: 40px;
+                height: 40px;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                background-color: rgb(255, 255, 255);
+
+                &:hover {
+                    background-color: var(--bg-color);
+                    color: white;
+                    transition: 0.2s;
+                    box-shadow: 0 5px 10px rgb(255, 255, 255);
+            
+                    &:hover a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
 
 .footer-content{
-    position: absolute;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -49,5 +88,7 @@ footer{
             }
         }
     }
-    
+
+ 
+}
 }
