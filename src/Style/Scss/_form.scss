@@ -147,7 +147,7 @@
  /*  If you are validating additional fields and 
  want to apply the same red text color for error
   messages, you would indeed use a similar rule for each corresponding error message element in your HTML.  */
-#name-error, #email-error, #phone-error, #subject-error, #textarea-error {
+  #name-error, #email-error, #phone-error, #subject-error, #textarea-error {
     color: red;
     font-size: small;
 }
@@ -160,10 +160,6 @@
     border-width: 2px; /* You can adjust this value to make the border thicker */
     border-color:red;
 }
-
-
-
-
 
 
 // google reCAPCTHA VALIDATION set to display none

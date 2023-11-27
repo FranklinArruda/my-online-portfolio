@@ -326,6 +326,37 @@ footer {
   border-top-left-radius: 50%;
   position: relative;
 }
+footer .scroll-up {
+  position: absolute;
+  bottom: 35px;
+  right: 40px;
+}
+footer .scroll-up a {
+  text-decoration: none;
+}
+footer .scroll-up a i {
+  font-size: 25px;
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+footer .scroll-up a i:hover {
+  background-color: var(--bg-color);
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+}
+footer .scroll-up a i:hover:hover a {
+  color: white;
+}
 footer .footer-content {
   position: relative;
   left: 50%;
@@ -571,76 +602,6 @@ button:hover {
   background-color: rgb(94, 151, 9);
   cursor: pointer;
   transition: 0.2s;
-}
-
-/* Width */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--btn-color);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(194, 192, 192);
-  border-radius: 5px;
-  height: 150px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #e0dede;
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.scrollUpBtn {
-  position: fixed;
-  bottom: 35px;
-  right: 40px;
-  animation: fadeInLeft 2s;
-}
-.scrollUpBtn a {
-  text-decoration: none;
-}
-.scrollUpBtn a i {
-  font-size: 30px;
-  color: rgb(90, 88, 88);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: rgb(194, 192, 192);
-}
-.scrollUpBtn a i:hover {
-  background-color: var(--bg-color);
-  color: white;
-  transition: 0.2s;
-  box-shadow: 0 5px 10px rgb(255, 255, 255);
-}
-.scrollUpBtn a i:hover:hover a {
-  color: white;
-}
-
-.scrollUpBtn.show {
-  display: block;
-}
-
-.scrollUpBtn.hide {
-  display: none;
 }
 
 * {
