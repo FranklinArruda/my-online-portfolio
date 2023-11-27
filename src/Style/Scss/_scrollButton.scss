@@ -1,0 +1,52 @@
+
+// adding key frames for transition animation
+@keyframes fadeInLeft {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+   
+   
+   // scroll up button
+   .scrollUpBtn{
+    position: fixed;
+    bottom: 35px;
+    right: 40px;
+    animation: fadeInLeft 2s;
+  
+
+    a {
+        text-decoration: none;
+       
+        i{
+            font-size: 30px;
+            color: rgb(90, 88, 88);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            background-color:rgb(194, 192, 192);
+            &:hover {
+                background-color: var(--bg-color);
+                color: white;
+                transition: 0.2s;
+                box-shadow: 0 5px 10px rgb(255, 255, 255);
+        
+                &:hover a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.scrollUpBtn.show {
+    display: block;
+}
+
+.scrollUpBtn.hide {
+    display: none;
+} 
