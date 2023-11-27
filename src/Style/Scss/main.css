@@ -604,6 +604,76 @@ button:hover {
   transition: 0.2s;
 }
 
+/* Width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--btn-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(194, 192, 192);
+  border-radius: 5px;
+  height: 150px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e0dede;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scrollUpBtn {
+  position: fixed;
+  bottom: 35px;
+  right: 40px;
+  animation: fadeInLeft 1s;
+}
+.scrollUpBtn a {
+  text-decoration: none;
+}
+.scrollUpBtn a i {
+  font-size: 30px;
+  color: rgb(90, 88, 88);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(194, 192, 192);
+}
+.scrollUpBtn a i:hover {
+  background-color: var(--bg-color);
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0 5px 10px rgb(255, 255, 255);
+}
+.scrollUpBtn a i:hover:hover a {
+  color: white;
+}
+
+.scrollUpBtn.show {
+  display: block;
+}
+
+.scrollUpBtn.hide {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;

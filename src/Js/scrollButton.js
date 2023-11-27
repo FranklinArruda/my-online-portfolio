@@ -4,7 +4,7 @@ const scrollUpBtn = document.querySelector(".scrollUpBtn");
 
 function showScrollUpBtn() {
 
-     if (window.scrollY > 400 ) {
+     if (window.scrollY > 300 ) {
         scrollUpBtn.classList.remove("hide");
         scrollUpBtn.classList.add("show");
     } else {
