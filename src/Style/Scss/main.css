@@ -59,7 +59,7 @@ header #menu-icon {
 }
 .home .home-content {
   width: auto;
-  animation: fadeInLeft 3s;
+  animation: fadeInLeft 5s;
 }
 .home .home-content h1, .home .home-content h3 {
   font-size: 1.5rem;

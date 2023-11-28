@@ -4,9 +4,6 @@ import { revealFunction } from "./scrollReveal.js";
 import { showScrollUpBtn } from "./scrollButton.js";
 
 
-// Call the setup function wherever it's needed, for example, after the DOM is loaded
-document.addEventListener('DOMContentLoaded', function () {
-
     revealFunction();
     
     // Read more function
@@ -33,8 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
         showScrollUpBtn();
     });
 
+    
+   
 
-});
+
+
 
 
 
