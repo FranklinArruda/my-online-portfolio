@@ -13,7 +13,6 @@
 
 ## Contents
 - [Introduction](#project-overview)
-
 - [Planning](#planning)
 - [Designing](#designing)
 - [Responsives](#responsiveness)

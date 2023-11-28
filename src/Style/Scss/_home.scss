@@ -7,8 +7,19 @@
   border-radius: 0 100% 0 0;
   background-color: var(--second-bg-color);
   
+
+  
+// Add delay to home content as well as to image as I couldt manage in scroll reveal
+@keyframes fadeInLeft {
+0% { opacity: 1; }
+100% { opacity: 1; }
+}
+
+
+
   .home-content{
     width:auto;
+    //animation: fadeInLeft 0.5s;  // adding animation fadein to home content container
     
     h1,h3{
       font-size: 1.5rem;
@@ -106,6 +117,7 @@
   }
 
   .portifolio-img {
+   // animation: fadeInLeft 4s;   // adding animation fadein to image
     width: 350px;
     height: auto;
     border-radius: 50%;

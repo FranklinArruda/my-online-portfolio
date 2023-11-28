@@ -49,6 +49,14 @@ header #menu-icon {
   border-radius: 0 100% 0 0;
   background-color: var(--second-bg-color);
 }
+@keyframes fadeInLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home .home-content {
   width: auto;
 }
@@ -929,5 +937,15 @@ section {
   }
   body footer .footer-content .foot.icons a i {
     font-size: 16px;
+  }
+  body .scrollUpBtn {
+    bottom: 20px;
+    right: 10px;
+  }
+  body .scrollUpBtn i {
+    font-size: 20px;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
   }
 }/*# sourceMappingURL=main.css.map */
