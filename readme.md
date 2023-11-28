@@ -57,6 +57,7 @@ https://www.figma.com/proto/eRbWnlQy8MbWAe3uijXVJB/Portifolio?type=design&node-i
 ## Responsiveness
 
 The portfolio was built with a desktop-first approach and later optimized for viewing on various mobile devices. 
+
 ![responsiveness](https://github.com/FranklinArruda/my-portifolio/assets/102427836/be078a3f-d146-44d3-918c-e3bde860481d)
 
 
