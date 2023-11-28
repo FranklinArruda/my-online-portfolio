@@ -57,8 +57,11 @@ https://www.figma.com/proto/eRbWnlQy8MbWAe3uijXVJB/Portifolio?type=design&node-i
 
 The portfolio was built with a desktop-first approach and later optimized for viewing on various mobile devices. 
 
+![responsiveness](https://github.com/FranklinArruda/my-portifolio/assets/102427836/be078a3f-d146-44d3-918c-e3bde860481d)
+
+
 ## Features
-The contact form incorporates real-time validation using a combination of CSS and JavaScript to enhance user experience. For added security, I've integrated reCAPTCHA. Additionally, I've included a showcase of some of my recent projects, providing visitors with a view into my evolving skill set and the progression of my learning journey.
+The contact form incorporates real-time validation using a combination of CSS and JavaScript to enhance user experience. For added security, I've integrated reCAPTCHA. Additionally, I've included a showcase of some of my recent projects, providing visitors with a view into my evolving skill set and the progression of my learning journey. Lastly, (download button) in the home page so potential employers can view what I have been up to. 
 
 ## Technologies Used
 * The core components include HTML, JavaScript, and CSS, with the use of SCSS for enhanced styling.
