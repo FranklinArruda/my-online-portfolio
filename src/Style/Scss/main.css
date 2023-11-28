@@ -51,7 +51,7 @@ header #menu-icon {
 }
 @keyframes fadeInLeft {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -59,6 +59,7 @@ header #menu-icon {
 }
 .home .home-content {
   width: auto;
+  animation: fadeInLeft 3s;
 }
 .home .home-content h1, .home .home-content h3 {
   font-size: 1.5rem;

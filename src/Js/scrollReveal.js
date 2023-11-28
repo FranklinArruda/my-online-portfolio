@@ -4,28 +4,29 @@
 // This function initializes ScrollReveal and adds animation effects to specific elements
 function revealFunction(){
     // Configure ScrollReveal with options
-    ScrollReveal({ 
+     ScrollReveal({ 
         //reset: true
         distance:'20px',
-        duration: 1300,
+        duration: 1200,
         easing:'ease',
         delay: 300
         
     });
-    ScrollReveal().reveal('.home-content', { origin:"left", reset:false}); 
-    ScrollReveal().reveal('.home-social-media', { origin:"bottom", reset:true}); 
-    ScrollReveal().reveal('.portifolio-img', {origin:'left', rotate:{x:2000, z:2000}, reset:true});
+
+    ScrollReveal().reveal('.portifolio-img', {origin:'left', rotate:{x:200, z:200}, reset:true});
 
     ScrollReveal().reveal('.btn-container.section1', {origin:'left', reset:false});
     ScrollReveal().reveal('.btn-container.section2', {origin:'bottom', reset:true});
     
-    ScrollReveal().reveal('.input-box', {origin:'left', rotate:{x:1, z:3000}, reset:true});
+    ScrollReveal().reveal('.input-box', {origin:'bottom', reset:true});
 
     ScrollReveal().reveal('.btn-container.form', {origin:'bottom',reset:true});
 
     ScrollReveal().reveal('.portifolio-box', { origin:"left", reset:true});        // Reveal elements from the left
     ScrollReveal().reveal('.about-header, .portifolio-header, .contact-header', { origin:"top", reset:true});  // Reveal elements from the top
-    ScrollReveal().reveal('.about-content,  #form', { origin:"right", reset:true});  // Reveal elements from the right  
+    ScrollReveal().reveal('.about-content,  #form', { origin:"right", reset:true});  // Reveal elements from the right   */
+
+   
 };
 
 // Export the function for external use
