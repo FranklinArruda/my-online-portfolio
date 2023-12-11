@@ -3,8 +3,12 @@ import { hideShowBar } from "./menuBar.js";
 import { revealFunction } from "./scrollReveal.js";
 import { showScrollUpBtn } from "./scrollButton.js";
 
+ 
 
+    //call revealfunction
     revealFunction();
+
+   
     
     // Read more function
     const readMoreButton = document.querySelector('.read-more-btn');
@@ -30,9 +34,11 @@ import { showScrollUpBtn } from "./scrollButton.js";
         showScrollUpBtn();
     });
 
-    
+
    
 
+    
+   
 
 
 
