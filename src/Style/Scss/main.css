@@ -224,8 +224,7 @@ header #menu-icon {
   position: relative;
   margin-top: 2rem;
   display: grid;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   row-gap: 50px;
   grid-template-columns: auto auto auto;
 }
@@ -237,6 +236,7 @@ header #menu-icon {
   transition: transform 0.5s ease;
 }
 .portifolio-box .card img {
+  object-fit: contain;
   width: inherit;
   height: auto;
   border-radius: 5px;
@@ -462,12 +462,6 @@ footer .footer-content .icons a i:hover {
   font-family: inherit;
 }
 .input-box .input .subject {
-  text-transform: uppercase;
-}
-.input-box .input ::-moz-placeholder {
-  color: rgb(140, 138, 138);
-  font-size: 12px;
-  font-family: sans-serif;
   text-transform: uppercase;
 }
 .input-box .input ::placeholder {
@@ -764,8 +758,7 @@ section {
   body .portifolio-box {
     margin-top: 2rem;
     display: grid;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     row-gap: 50px;
     grid-template-columns: auto auto;
   }
@@ -878,8 +871,7 @@ section {
   body .portifolio-box {
     margin-top: 2rem;
     display: grid;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     row-gap: 50px;
     grid-template-columns: auto;
   }
