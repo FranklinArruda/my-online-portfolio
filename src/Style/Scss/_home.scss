@@ -86,7 +86,7 @@
   &:hover{
     background-color:var(--bg-color);
     color: white;
-    transition: 0.2s;
+    transition: 2s;
     box-shadow: 0 5px 10px rgb(7, 108, 136);
     padding-right: 18px;
 
@@ -100,6 +100,15 @@
 
 
 
+  // // motion up and down
+  @keyframes moveUpDown {
+     0%, 100% {
+       transform: translateY(0);
+     }
+     50% {
+       transform: translateY(-15px); /* Adjust the distance as needed */
+     }
+   }
 
 
 
@@ -108,8 +117,9 @@
   border-radius: 50%;
   outline: 0.5px solid var(--bg-color);
   outline-offset: 50px;
-  transition: transform 0.2s ease; /* Add a smooth transition effect */
-  
+  transition: transform 0.5s ease; /* Add a smooth transition effect */
+  animation: moveUpDown 2s infinite;
+
   &:hover{  // push both image + outline border OUT
     transform: scale(1.2); /* Zoom out the image on hover (you can adjust the scale factor) */
     transition: transform 1.5s ease;

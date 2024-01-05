@@ -8,8 +8,6 @@ import { showScrollUpBtn } from "./scrollButton.js";
     //call revealfunction
     revealFunction();
 
-   
-    
     // Read more function
     const readMoreButton = document.querySelector('.read-more-btn');
     readMoreButton.addEventListener('click', function(event) {

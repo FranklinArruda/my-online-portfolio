@@ -1,5 +1,9 @@
 
+// import all validations
 import { eventListenersFormValidation } from "./formValidation.js";
+
+// call validations
+eventListenersFormValidation();
 
 // Function to get values of input fields
 function getInputValues() {
@@ -25,8 +29,7 @@ const phoneCode = window.intlTelInput(phoneInput, {
     initialCountry: "IE", // Set the country code for Ireland
 });
 
-// validation functions 
-eventListenersFormValidation();
+
 
 
 // send email form
@@ -105,10 +108,12 @@ function hidePopup() {
 
 
 
-const reCAPCHA = document.querySelector(".g-recaptcha");
-function showRECAPTCHA(){
-    reCAPCHA.style.display = "flex"
-};
+// const reCAPCHA = document.querySelector(".g-recaptcha");
+// function showRECAPTCHA(){
+//     reCAPCHA.style.display = "flex"
+// };
+
+
 
 function hideRECAPTCHA(){
     reCAPCHA.style.display = "none"
@@ -135,7 +140,7 @@ form.addEventListener("click", (event) => {
 
     else if (!response) {
         // If not completed, display an error message or take appropriate action
-        showRECAPTCHA();
+        //showRECAPTCHA();
         alert("Please mplete the reCAPTCHA.");
         return false;
       } 

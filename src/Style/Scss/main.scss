@@ -63,6 +63,10 @@ section {
     cursor: pointer;
 }
 
+a:hover,
+.btn {
+  transition: all 300ms ease-out;
+}
 
 @media only screen and (max-width: 768px) {
     /* Your CSS rules for medium screens here */

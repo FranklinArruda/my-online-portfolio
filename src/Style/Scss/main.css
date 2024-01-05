@@ -112,7 +112,7 @@ header #menu-icon {
 .btn-container.section1:hover {
   background-color: var(--bg-color);
   color: white;
-  transition: 0.2s;
+  transition: 2s;
   box-shadow: 0 5px 10px rgb(7, 108, 136);
   padding-right: 18px;
 }
@@ -120,11 +120,20 @@ header #menu-icon {
   color: white;
 }
 
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Adjust the distance as needed */
+  }
+}
 .portifolio-img-container {
   border-radius: 50%;
   outline: 0.5px solid var(--bg-color);
   outline-offset: 50px;
-  transition: transform 0.2s ease; /* Add a smooth transition effect */
+  transition: transform 0.5s ease; /* Add a smooth transition effect */
+  animation: moveUpDown 2s infinite;
 }
 .portifolio-img-container:hover {
   transform: scale(1.2); /* Zoom out the image on hover (you can adjust the scale factor) */
@@ -174,13 +183,12 @@ header #menu-icon {
 .about-content .btn-container.section2:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  transition: 0.2s;
-  padding-right: 18px;
   font-weight: 600;
   box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 .about-content .btn-container.section2:hover:hover a {
   color: rgb(0, 0, 0);
+  transition: all 300ms ease-out;
 }
 .about-content .read-more-text {
   display: none;
@@ -499,13 +507,12 @@ footer .footer-content .icons a i:hover {
 .btn-container.form:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  transition: 0.2s;
-  padding-right: 18px;
   font-weight: 600;
   box-shadow: 0 5px 10px rgb(255, 255, 255);
 }
 .btn-container.form:hover:hover a {
   color: rgb(0, 0, 0);
+  transition: all 300ms ease-out;
 }
 
 /* Default text color for error message */
@@ -529,7 +536,7 @@ want to apply the same red text color for error
 
 .g-recaptcha {
   margin: 25px;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -723,6 +730,11 @@ section {
   border-radius: 25px;
   text-decoration: none;
   cursor: pointer;
+}
+
+a:hover,
+.btn {
+  transition: all 300ms ease-out;
 }
 
 @media only screen and (max-width: 768px) {
