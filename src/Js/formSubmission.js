@@ -108,16 +108,18 @@ function hidePopup() {
 
 
 
-// const reCAPCHA = document.querySelector(".g-recaptcha");
-// function showRECAPTCHA(){
+ const reCAPCHA = document.querySelector(".g-recaptcha");
+
+// show recaptcha
+ // function showRECAPTCHA(){
 //     reCAPCHA.style.display = "flex"
 // };
 
 
-
-function hideRECAPTCHA(){
-    reCAPCHA.style.display = "none"
-};
+// hide recaptcha
+ function hideRECAPTCHA(){
+     reCAPCHA.style.display = "none"
+ };
 
 
 const popUp = document.querySelector(".popup");
