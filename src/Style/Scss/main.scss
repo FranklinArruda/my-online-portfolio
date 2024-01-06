@@ -140,6 +140,13 @@ a:hover,
             position: relative;
             .logo{
                 font-style: italic;
+                
+            }
+
+            //the translation button 
+            #google_translate_element{
+                position: relative;
+                top: 55px;
             }
         }
 
@@ -187,7 +194,7 @@ a:hover,
         }
 
         .home-content {
-            margin-top: 1rem;
+            margin-top: 4rem;
             position: relative;
             text-align: center; /* Center-align text within the .home-content div */
             justify-content: center;

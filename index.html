@@ -38,6 +38,8 @@
    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    <script defer type="module" src="./src/Js/main.js"></script>
 
+
+
 </head>
 
 
@@ -45,8 +47,15 @@
 
    <!-- header -->
    <header class="header">
+
       <a href="#" class="logo"><span>Franklin </span>Arruda Cirino</a>
+      
+       <!-- Add a div for the translation button -->
+      <span id="google_translate_element"></span>
+   
+
       <i class="fa-solid fa-bars" id="menu-icon"></i>
+      
       <nav class="nav-bar">
          <ul>
             <li><a class="active" href="#home">Home</a></li>
@@ -55,6 +64,7 @@
             <li><a href="#contact">Contact</a></li>
          </ul>
       </nav>
+   
    </header>
 
    <!-- home section  -->
@@ -86,7 +96,6 @@
          <img class="portifolio-img" src="./assets/images/portifolio-img/portifolio-img.jpg" alt="Portfolio image">
       </div>
    </section>
-
 
    <!-- about section  -->
    <section class="about" id="about">
@@ -143,7 +152,6 @@
          <h2 class="down-header">Projects</h2>
          <span class="border-bottom portifolio"></span>
       </div>
-
 
       <p class="portifolio-content-header">These projects are a snapshot of what I've been up to, and I'll keep tossing
          in new ones as I keep on learning
@@ -275,9 +283,6 @@
       </div>
    </section>
 
-
-
-
    <!-- contact section  -->
    <section class="contact" id="contact">
       <div class="form-center">
@@ -286,7 +291,6 @@
             <h2 class="down-header">Contact Me</h2>
             <span class="border-bottom contact"></span>
          </div>
-
 
          <form id="form" action="?" method="POST">
             <div class="input-box">
@@ -341,9 +345,6 @@
       </div>
    </section>
 
-
-
-
    <!-- footer section -->
    <footer>
       <div class="footer-content">
@@ -364,18 +365,23 @@
       </div>
    </footer>
 
-
-
    <!-- scroll up button -->
    <span class="scrollUpBtn">
       <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
    </span>
 
-
    <!-- Custom JavaScript -->
    <script type="module" src="./src/Js/formSubmission.js"></script>
-
    <script src="typing.js"></script>
-</body>
+   <div id="google_translate_element"></div>
 
+   <script type="text/javascript">
+   function googleTranslateElementInit() {
+     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+   }
+   </script>
+   
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   
+</body>
 </html>

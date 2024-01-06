@@ -42,6 +42,16 @@ header #menu-icon {
   cursor: pointer;
 }
 
+.logo {
+  position: absolute;
+}
+
+#google_translate_element {
+  position: relative;
+  top: 40px;
+  left: 0;
+}
+
 .home {
   display: flex;
   justify-content: center;
@@ -797,6 +807,10 @@ a:hover,
   body header .logo {
     font-style: italic;
   }
+  body header #google_translate_element {
+    position: relative;
+    top: 55px;
+  }
   body #menu-icon {
     display: block;
     color: white;
@@ -836,7 +850,7 @@ a:hover,
     text-align: center; /* Center-align text within the section */
   }
   body .home-content {
-    margin-top: 1rem;
+    margin-top: 4rem;
     position: relative;
     text-align: center; /* Center-align text within the .home-content div */
     justify-content: center;
