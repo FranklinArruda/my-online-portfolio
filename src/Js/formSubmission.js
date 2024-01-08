@@ -35,6 +35,10 @@ const phoneCode = window.intlTelInput(phoneInput, {
 // send email form
 function sendEmail() {
 
+    
+    const text = subject;
+    const subjectUpper = text.toUpperCase();
+
     // get phone number
     const phoneNumber = phoneCode.getNumber();
 
@@ -72,7 +76,7 @@ function sendEmail() {
                     <p><strong>Name: </strong>${name}</p>
                     <p><strong>Email: </strong>${email}</p>
                     <p><strong>Phone: </strong>${phoneNumber}</p>
-                    <p><strong>Subject: </strong>${subject}</p>
+                    <p><strong>Subject: </strong>${subjectUpper}</p>
                     <p><strong>Message: </strong>${message}</p>
                 </div>
             </body>
