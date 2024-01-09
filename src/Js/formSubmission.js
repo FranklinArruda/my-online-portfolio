@@ -10,7 +10,7 @@ function getInputValues() {
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
+    const subject = document.getElementById("subject").value.trim().toUpperCase();
     const message = document.getElementById("text-area").value.trim();
 
     return {
@@ -28,9 +28,6 @@ const phoneCode = window.intlTelInput(phoneInput, {
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
     initialCountry: "IE", // Set the country code for Ireland
 });
-
-
-
 
 // send email form
 function sendEmail() {
@@ -142,10 +139,11 @@ form.addEventListener("click", (event) => {
 
     else if (!response) {
         // If not completed, display an error message or take appropriate action
-        //showRECAPTCHA();
+       showRECAPTCHA();
         alert("Please mplete the reCAPTCHA.");
         return false;
       } 
+      
     else {
         hideRECAPTCHA();
         sendEmail();
