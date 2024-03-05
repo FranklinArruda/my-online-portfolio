@@ -41,7 +41,7 @@ At the beggining , I took it out my initial vision onto paper, sketching out the
 
 
 
-* **Figma Version:**
+* **Figma**
 
 Leveraging the power of design tools, I transitioned from paper sketches to a digital representation using Figma. This stage allowed for a more refined and detailed exploration of the layout.
 

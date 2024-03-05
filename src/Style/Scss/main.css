@@ -242,11 +242,13 @@ header #menu-icon {
   position: relative;
   margin-top: 2rem;
   display: grid;
-  column-gap: 10px;
-  row-gap: 50px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 75px;
   grid-template-columns: auto auto auto;
 }
 .portifolio-box .card {
+  z-index: -1;
   margin: auto;
   width: 90%;
   height: auto;
@@ -254,7 +256,8 @@ header #menu-icon {
   transition: transform 0.5s ease;
 }
 .portifolio-box .card img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: inherit;
   height: auto;
   border-radius: 5px;
@@ -300,12 +303,12 @@ header #menu-icon {
 }
 .portifolio-box .to-go .read-more-card-text {
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
   left: 10px;
-  bottom: 5px;
+  top: 30px;
   font-size: 14px;
-  width: 100%;
-  height: 200px;
+  width: 350px;
+  height: 220px;
   overflow: scroll;
   display: none;
   background-color: rgb(225, 225, 225);
@@ -480,6 +483,12 @@ footer .footer-content .icons a i:hover {
   font-family: inherit;
 }
 .input-box .input .subject {
+  text-transform: uppercase;
+}
+.input-box .input ::-moz-placeholder {
+  color: rgb(140, 138, 138);
+  font-size: 12px;
+  font-family: sans-serif;
   text-transform: uppercase;
 }
 .input-box .input ::placeholder {
@@ -780,7 +789,8 @@ a:hover,
   body .portifolio-box {
     margin-top: 2rem;
     display: grid;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     row-gap: 50px;
     grid-template-columns: auto auto;
   }
@@ -897,7 +907,8 @@ a:hover,
   body .portifolio-box {
     margin-top: 2rem;
     display: grid;
-    column-gap: 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     row-gap: 50px;
     grid-template-columns: auto;
   }

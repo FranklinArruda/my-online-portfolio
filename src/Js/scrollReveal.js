@@ -6,7 +6,7 @@ function revealFunction(){
     // Configure ScrollReveal with options
     ScrollReveal({ 
         //reset: true
-        distance:'20px',
+        distance:'15px',
         duration: 1200,
         easing:'ease',
         delay: 200
