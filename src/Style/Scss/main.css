@@ -711,6 +711,9 @@ button:hover {
   list-style: none;
   box-sizing: border-box;
   outline: none;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
